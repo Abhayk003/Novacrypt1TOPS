@@ -1,0 +1,22 @@
+# Verilator
+obj_dir/
+*.vcd
+*.fst
+# generated mem images at repo root (keep the ones under sw/)
+/bootrom.mem
+/program.mem
+# Vivado
+*.jou
+*.log
+*.str
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+vivado*.backup.*
+# OS
+.DS_Store
+Thumbs.db
