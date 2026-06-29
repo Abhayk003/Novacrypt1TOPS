@@ -480,7 +480,7 @@ module soc_top (
     .spi_sdo2 (/* quad */),
     .spi_sdo3 (/* quad */),
     .spi_sdi0 (spi_miso_i),
-    .spi_sdi1 (1'b0),
+    .spi_sdi1 (spi_miso_i),   // standard (single-lane) RX samples sdi1, so MISO must drive it
     .spi_sdi2 (1'b0),
     .spi_sdi3 (1'b0)
   );
