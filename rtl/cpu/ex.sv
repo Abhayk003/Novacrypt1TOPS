@@ -78,6 +78,7 @@ module ex(
     input  logic        irq_software_i,
     input  logic        irq_external_i,
     output logic        trap_taken_o,
+    output logic        exc_taken_o,
     output logic [31:0] trap_target_o,
     output logic        mret_taken_o,
     output logic [31:0] mret_target_o
@@ -406,6 +407,28 @@ logic is_ecall, is_ebreak;
 assign is_ecall  = (opcode == SYSTEM) && (funct3 == 3'b000) && (csr_addr == 12'h000);
 assign is_ebreak = (opcode == SYSTEM) && (funct3 == 3'b000) && (csr_addr == 12'h001);
 
+// ---- synchronous-exception detection ----
+// Illegal instruction: opcode is not one of the implemented RV32IM opcodes.
+// The all-zero opcode (7'b0) is the pipeline bubble / flush filler, NOT a real
+// fetched instruction, so it must not be flagged as illegal.
+logic opcode_known;
+assign opcode_known = (opcode == OP)    || (opcode == OP_IMM) || (opcode == BRANCH) ||
+                      (opcode == JAL)   || (opcode == JALR)   || (opcode == LUI)    ||
+                      (opcode == LOAD)  || (opcode == STORE)  || (opcode == SYSTEM) ||
+                      (opcode == AUIPC);
+logic is_illegal;
+assign is_illegal = (opcode != 7'b0000000) && ~opcode_known;
+
+// Load/store address misalignment (mem_address = op1 + immediate, computed above).
+// funct3: 001 = halfword (addr[0] must be 0); 010 = word (addr[1:0] must be 0).
+logic load_misalign, store_misalign;
+assign load_misalign  = (opcode == LOAD)  &&
+                        (((funct3 == 3'b001) && (mem_address[0]))   ||  // LH/LHU
+                         ((funct3 == 3'b010) && (mem_address[1:0] != 2'b0)));// LW
+assign store_misalign = (opcode == STORE) &&
+                        (((funct3 == 3'b001) && (mem_address[0]))   ||  // SH
+                         ((funct3 == 3'b010) && (mem_address[1:0] != 2'b0)));// SW
+
 csr csr_block (
     .clk(clk),
     .reset(reset),
@@ -419,11 +442,16 @@ csr csr_block (
     .is_mret(is_mret),
     .is_ecall(is_ecall),
     .is_ebreak(is_ebreak),
+    .is_illegal(is_illegal),
+    .load_misalign(load_misalign),
+    .store_misalign(store_misalign),
+    .bad_addr(mem_address),
     .inst_valid(1'b1),
     .irq_timer_i(irq_timer_i),
     .irq_software_i(irq_software_i),
     .irq_external_i(irq_external_i),
     .trap_taken_o(trap_taken_o),
+    .exc_taken_o(exc_taken_o),
     .trap_target_o(trap_target_o),
     .mret_taken_o(mret_taken_o),
     .mret_target_o(mret_target_o)
