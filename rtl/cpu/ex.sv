@@ -401,6 +401,11 @@ logic [31:0] csr_result;
 logic is_mret;
 assign is_mret = (opcode == SYSTEM) && (funct3 == 3'b000) && (csr_addr == 12'h302);
 
+// ECALL = SYSTEM, funct3=000, instr[31:20]=0x000 ; EBREAK = 0x001.
+logic is_ecall, is_ebreak;
+assign is_ecall  = (opcode == SYSTEM) && (funct3 == 3'b000) && (csr_addr == 12'h000);
+assign is_ebreak = (opcode == SYSTEM) && (funct3 == 3'b000) && (csr_addr == 12'h001);
+
 csr csr_block (
     .clk(clk),
     .reset(reset),
@@ -412,6 +417,8 @@ csr csr_block (
     .csr_rdata(csr_result),
     .cur_pc(pc),
     .is_mret(is_mret),
+    .is_ecall(is_ecall),
+    .is_ebreak(is_ebreak),
     .inst_valid(1'b1),
     .irq_timer_i(irq_timer_i),
     .irq_software_i(irq_software_i),
