@@ -41,6 +41,10 @@ module csr(
     input  logic        is_mret,       // current instruction is MRET
     input  logic        is_ecall,      // current instruction is ECALL
     input  logic        is_ebreak,     // current instruction is EBREAK
+    input  logic        is_illegal,    // current instruction has an unknown opcode
+    input  logic        load_misalign, // misaligned load address
+    input  logic        store_misalign,// misaligned store address
+    input  logic [31:0] bad_addr,      // effective address for misalign mtval
     input  logic        inst_valid,    // EX holds a valid instruction
 
     // hardware interrupt request lines (level-sensitive)
@@ -50,6 +54,7 @@ module csr(
 
     // redirect outputs to the fetch/PC logic
     output logic        trap_taken_o,
+    output logic        exc_taken_o,    // trap was a synchronous exception (squash EX/MEM)
     output logic [31:0] trap_target_o,
     output logic        mret_taken_o,
     output logic [31:0] mret_target_o
@@ -146,14 +151,26 @@ module csr(
   // same cycle we are already redirecting via mret.
   wire take_irq = irq_pending && inst_valid && !is_mret;
 
-  // Synchronous exceptions (ECALL / EBREAK): trap unconditionally on a valid
-  // instruction (not gated by mstatus.MIE), unless we are already doing mret.
-  wire take_exc = (is_ecall || is_ebreak) && inst_valid && !is_mret;
-  // ECALL from M-mode = cause 11; EBREAK = cause 3 (interrupt bit = 0).
-  wire [31:0] exc_cause = is_ecall ? 32'd11 : 32'd3;
+  // Synchronous exceptions: trap unconditionally on a valid instruction (not
+  // gated by mstatus.MIE), unless we are already doing mret.
+  wire any_exc = is_illegal || is_ecall || is_ebreak || load_misalign || store_misalign;
+  wire take_exc = any_exc && inst_valid && !is_mret;
+
+  // Cause selection by RISC-V synchronous priority (highest first):
+  //   illegal(2) > breakpoint(3) > load-misalign(4) > store-misalign(6) > ecall(11)
+  // mtval: faulting address for misaligned load/store, else 0.
+  logic [31:0] exc_cause, exc_tval;
+  always_comb begin
+    if (is_illegal)            begin exc_cause = 32'd2;  exc_tval = 32'd0; end
+    else if (is_ebreak)        begin exc_cause = 32'd3;  exc_tval = 32'd0; end
+    else if (load_misalign)    begin exc_cause = 32'd4;  exc_tval = bad_addr; end
+    else if (store_misalign)   begin exc_cause = 32'd6;  exc_tval = bad_addr; end
+    else                       begin exc_cause = 32'd11; exc_tval = 32'd0; end // ECALL
+  end
 
   // An exception takes priority over an interrupt in the same cycle.
   assign trap_taken_o  = take_irq || take_exc;
+  assign exc_taken_o   = take_exc;
   assign trap_target_o = mtvec_q;          // direct mode: jump straight to base
   assign mret_taken_o  = is_mret && inst_valid;
   assign mret_target_o = mepc_q;
@@ -174,8 +191,9 @@ module csr(
     end else begin
       // Priority: synchronous exception > interrupt > mret > CSR write.
       if (take_exc) begin
-        mepc_q       <= cur_pc;                 // ECALL/EBREAK: mepc = the faulting PC
+        mepc_q       <= cur_pc;                 // faulting PC
         mcause_q     <= {1'b0, exc_cause[30:0]}; // interrupt bit = 0
+        mtval_q      <= exc_tval;                // faulting address (misalign) or 0
         mstatus_mpie <= mstatus_mie;
         mstatus_mie  <= 1'b0;
       end else if (take_irq) begin
