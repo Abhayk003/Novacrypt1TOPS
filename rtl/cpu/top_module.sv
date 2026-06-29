@@ -137,6 +137,7 @@ logic        forwardA;
 logic        forwardB;
 logic        branch_taken;
 logic        trap_taken;
+logic        exc_taken;
 logic [31:0] trap_target;
 logic        mret_taken;
 logic [31:0] mret_target;
@@ -271,6 +272,7 @@ ex execute_stage (
     .irq_software_i(irq_software_i),
     .irq_external_i(irq_external_i),
     .trap_taken_o(trap_taken),
+    .exc_taken_o(exc_taken),
     .trap_target_o(trap_target),
     .mret_taken_o(mret_taken),
     .mret_target_o(mret_target)
@@ -410,7 +412,12 @@ always_comb begin
     end
     else if (jalr_taken || trap_taken || mret_taken) begin
         ifid_ex_next  = '0;
-        //ex_memwb_next = '0;
+        // On a synchronous exception (illegal/misalign/ecall/ebreak), the faulting
+        // instruction must NOT commit: squash the EX/MEM stage so a misaligned
+        // load/store never reaches the bus. (Interrupts are taken between
+        // instructions, so the interrupted instruction still completes.)
+        if (exc_taken)
+            ex_memwb_next = '0;
     end
     else if (branch_taken) begin
         ifid_ex_next = '0;
