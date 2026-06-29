@@ -39,6 +39,8 @@ module csr(
     // pipeline context
     input  logic [31:0] cur_pc,        // PC of the instruction in EX
     input  logic        is_mret,       // current instruction is MRET
+    input  logic        is_ecall,      // current instruction is ECALL
+    input  logic        is_ebreak,     // current instruction is EBREAK
     input  logic        inst_valid,    // EX holds a valid instruction
 
     // hardware interrupt request lines (level-sensitive)
@@ -144,7 +146,14 @@ module csr(
   // same cycle we are already redirecting via mret.
   wire take_irq = irq_pending && inst_valid && !is_mret;
 
-  assign trap_taken_o  = take_irq;
+  // Synchronous exceptions (ECALL / EBREAK): trap unconditionally on a valid
+  // instruction (not gated by mstatus.MIE), unless we are already doing mret.
+  wire take_exc = (is_ecall || is_ebreak) && inst_valid && !is_mret;
+  // ECALL from M-mode = cause 11; EBREAK = cause 3 (interrupt bit = 0).
+  wire [31:0] exc_cause = is_ecall ? 32'd11 : 32'd3;
+
+  // An exception takes priority over an interrupt in the same cycle.
+  assign trap_taken_o  = take_irq || take_exc;
   assign trap_target_o = mtvec_q;          // direct mode: jump straight to base
   assign mret_taken_o  = is_mret && inst_valid;
   assign mret_target_o = mepc_q;
@@ -163,8 +172,13 @@ module csr(
       mcause_q     <= 32'b0;
       mtval_q      <= 32'b0;
     end else begin
-      // Priority: trap entry > mret > explicit CSR write.
-      if (take_irq) begin
+      // Priority: synchronous exception > interrupt > mret > CSR write.
+      if (take_exc) begin
+        mepc_q       <= cur_pc;                 // ECALL/EBREAK: mepc = the faulting PC
+        mcause_q     <= {1'b0, exc_cause[30:0]}; // interrupt bit = 0
+        mstatus_mpie <= mstatus_mie;
+        mstatus_mie  <= 1'b0;
+      end else if (take_irq) begin
         mepc_q       <= cur_pc;
         mcause_q     <= {1'b1, 27'b0, irq_cause};
         mstatus_mpie <= mstatus_mie;
