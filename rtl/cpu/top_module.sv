@@ -144,7 +144,10 @@ logic [31:0] mret_target;
 // Any control-flow redirect (branch/jump/trap/mret) flushes + resteers PC.
 logic        redirect;
 logic [31:0] redirect_target;
-assign redirect        = branch_taken || jalr_taken || trap_taken || mret_taken;
+// FIX: a stalled instruction (load-use hazard) must NOT redirect on a branch/jump
+// computed from its not-yet-forwarded operand. Gate branch/jalr with !stall.
+// Trap/mret are asynchronous control events and are not gated.
+assign redirect        = ((branch_taken || jalr_taken) && !stall) || trap_taken || mret_taken;
 assign redirect_target = trap_taken   ? trap_target :
                          mret_taken    ? mret_target :
                          branch_taken  ? branch_immediate :
