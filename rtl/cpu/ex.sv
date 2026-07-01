@@ -446,7 +446,8 @@ csr csr_block (
     .load_misalign(load_misalign),
     .store_misalign(store_misalign),
     .bad_addr(mem_address),
-    .inst_valid(1'b1),
+    .inst_valid(opcode != 7'b0),   // FIX: bubbles (opcode==0) are NOT valid instructions;
+                                   // prevents taking an IRQ on a flush bubble and saving mepc=0
     .irq_timer_i(irq_timer_i),
     .irq_software_i(irq_software_i),
     .irq_external_i(irq_external_i),
