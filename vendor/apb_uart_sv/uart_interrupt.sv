@@ -77,6 +77,13 @@ module uart_interrupt
         // Transmitter holding register empty
         else if (IER_i[1] & tx_elements_i == 0)
             iir_n = 4'b0100;
+        // FIX: no active interrupt source -> return IIR to the idle "no interrupt
+        // pending" encoding (0001). Without this, once a pending interrupt is
+        // cleared via clr_int_i the register decays to 0000, which reads as
+        // interrupt_o = ~iir_q[0] = 1 forever. With a level-sensitive PLIC this
+        // wedges the claim/complete loop (the source never de-asserts).
+        else if (iir_n == 4'b0000)
+            iir_n = 4'b0001;
     end
 
 
@@ -96,4 +103,3 @@ module uart_interrupt
     assign interrupt_o = ~iir_q[0];
 
 endmodule
-
