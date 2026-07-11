@@ -116,8 +116,16 @@ assign op2_temp = (opcode == OP_IMM) ? immediate : reg_rdata2;
 logic uses_rs2;
 assign uses_rs2 = (opcode == OP) || (opcode == STORE) || (opcode == BRANCH);
 
-assign op1 = (forwardA == 1) ? ex_forward : op1_temp;
-assign op2 = (forwardB == 1 && uses_rs2) ? ex_forward : op2_temp;
+// FIX (VCS X-safety): use case-equality (===) on the forward-select so that if
+// forwardA/forwardB is X (which can happen in VCS when a forwarding comparison
+// operand -- e.g. a pipeline-bubble rd/rs field -- is X during a multi-cycle
+// divide stall), the mux cleanly DEFAULTS to the register-file value instead of
+// propagating X into op1/op2. With ==, an X select made op2 = X, which for a
+// DIV fed an X divisor into the radix-4 unit (d1/d2/d3_reg = X) and produced a
+// div_result of xxxxxxxx (seen on the AXI store bus). Verilator's 0-init hid
+// this; VCS (X-accurate) exposed it. === is the standard defensive form here.
+assign op1 = (forwardA === 1'b1)                 ? ex_forward : op1_temp;
+assign op2 = (forwardB === 1'b1 && uses_rs2)     ? ex_forward : op2_temp;
 
 
 assign rd_o = rd_i;
