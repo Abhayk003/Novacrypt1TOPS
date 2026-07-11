@@ -78,8 +78,24 @@ assign dmem_stall = ex_memwb_r.mem_read && !dmem_rvalid;
 // arrives. Prevents dropped/overwritten writes when a slow slave (e.g. APB
 // peripheral behind the bridge) back-pressures the write channel.
 logic store_inflight;
+logic advance_after_store;        // pulse: pipeline advancing off a completed store
+logic store_completed;  // FIX: set when a store's B response is received; blocks
+                        // the same store from re-issuing while dmem_we remains
+                        // asserted (pipeline stalled behind a later multi-cycle
+                        // op). Cleared when dmem_we drops (store leaves MEM).
 logic store_stall;
-assign store_stall = dmem_we && !(store_inflight && BVALID_D);
+// A store stalls the pipeline until its AXI write response (B) is received.
+// store_completed (set when B returns) releases the stall so the store can
+// retire; it is cleared per-store (see store FSM) so back-to-back stores each
+// issue exactly once and a store frozen behind a following multi-cycle op
+// (mul/div) does not deadlock the pipeline.
+logic this_store_done;
+assign this_store_done = store_completed && (dmem_addr == AWADDR_D);
+assign store_stall = dmem_we && !this_store_done;
+// The cycle a completed store actually advances (store_completed high and the
+// pipeline not held by dmem/mul/div stalls), pulse advance_after_store so the
+// completed flag is cleared for the next store entering MEM.
+assign advance_after_store = store_completed && !dmem_stall && !mul_stall && !div_stall;
 
 // Pipeline structs
 typedef struct packed {
@@ -382,10 +398,41 @@ always_ff @(posedge clk) begin
         WSTRB_D        <= 4'b1111;
         BREADY_D       <= 1'b1;
         store_inflight <= 1'b0;
+        store_completed <= 1'b0;
     end
     else begin
         BREADY_D <= 1'b1;
-        if (dmem_we && !store_inflight && !AWVALID_D && !WVALID_D) begin
+        // Clear the completed-latch once the store instruction has actually left
+        // the MEM stage (dmem_we deasserts). Until then, keep it set so the same
+        // store cannot be issued again until it retires. store_completed is
+        // held only while THIS store is still the one in MEM; it clears as soon
+        // as the pipeline is no longer frozen on it (store_stall deasserted) so
+        // the next back-to-back store starts fresh. Concretely: clear when the
+        // store leaves MEM (dmem_we low) OR one cycle after completion once the
+        // stall has been released (advance_after_store), so each of several
+        // consecutive stores (e.g. the four SW in muldiv_corner) issues exactly
+        // once instead of the first store's completed-flag suppressing the rest.
+        // Clear store_completed when the store leaves MEM (!dmem_we) OR when a
+        // DIFFERENT store is now presented in MEM (dmem_addr no longer matches the
+        // address we just completed). The address check distinguishes the two
+        // cases that share dmem_we=1:
+        //   (a) back-to-back stores (muldiv: SW 0x20000,4,8,c) -- dmem_addr CHANGES
+        //       each store, so store_completed clears and the next store issues.
+        //   (b) one store frozen in MEM behind a following multiply -- dmem_addr
+        //       stays the SAME, so store_completed stays set and the store is not
+        //       re-issued on the bus while it waits to retire.
+        if (!dmem_we || (store_completed && dmem_addr != AWADDR_D))
+            store_completed <= 1'b0;
+
+        // FIX: added "&& !store_completed". Previously a store re-issued whenever
+        // (dmem_we && !store_inflight) held, which recurs every time store_inflight
+        // clears while dmem_we is still asserted -- exactly what happens when the
+        // pipeline is stalled behind a following multi-cycle op (mul/div). That
+        // drove the SAME AXI write 2-4 times (observed as duplicate bus events /
+        // "extra DUT memory op" in random_regression). store_completed makes each
+        // store fire exactly once until it retires from MEM.
+        if (dmem_we && !store_inflight && !store_completed
+            && !AWVALID_D && !WVALID_D) begin
             AWADDR_D       <= dmem_addr;
             WDATA_D        <= dmem_wdata;
             WSTRB_D        <= store_wstrb;
@@ -397,8 +444,10 @@ always_ff @(posedge clk) begin
             if (AWREADY_D) AWVALID_D <= 1'b0;
             if (WREADY_D)  WVALID_D  <= 1'b0;
             if (store_inflight && BVALID_D && BREADY_D
-                && !AWVALID_D && !WVALID_D)
-                store_inflight <= 1'b0;
+                && !AWVALID_D && !WVALID_D) begin
+                store_inflight  <= 1'b0;
+                store_completed <= 1'b1;   // mark this store done; block re-issue
+            end
         end
     end
 end
