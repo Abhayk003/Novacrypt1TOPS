@@ -34,8 +34,9 @@ localparam BURST_LEN     = 4;
 localparam BURST_LEN_AXI = BURST_LEN - 1;
 localparam FIFO_DEPTH    = 8;
 
-typedef enum logic [1:0] {
+typedef enum logic [2:0] {
     IDLE,
+    AR_WAIT,   // FIX: hold ARVALID asserted until ARREADY completes the AR handshake
     FETCH,
     FLUSH
 } state_t;
@@ -86,9 +87,46 @@ always_comb begin
                 fetch_pc_next = branch_immediate;
             end
             else if (fifo_free >= BURST_LEN) begin
-                ARVALID       = 1'b1;
-                fetch_pc_next = fetch_pc + (BURST_LEN * 4);
-                next_state    = FETCH;
+                // Assert ARVALID and present ARADDR = fetch_pc. Do NOT advance
+                // fetch_pc yet and do NOT move to FETCH unconditionally -- the
+                // AR handshake only completes when ARREADY is also high. With a
+                // zero-latency memory ARREADY is high immediately (so we take the
+                // handshake this cycle); with a latency-inserting AXI slave we
+                // must hold ARVALID until ARREADY (handled in AR_WAIT).
+                ARVALID = 1'b1;
+                if (ARREADY) begin
+                    // AR accepted this cycle: advance PC and start receiving beats.
+                    fetch_pc_next = fetch_pc + (BURST_LEN * 4);
+                    next_state    = FETCH;
+                end
+                else begin
+                    // AR not yet accepted: keep ARVALID asserted next cycle.
+                    next_state    = AR_WAIT;
+                end
+            end
+        end
+
+        // FIX: new state -- hold ARVALID/ARADDR stable until the slave asserts
+        // ARREADY. Only then advance fetch_pc and proceed to receive the burst.
+        // The previous FSM advanced fetch_pc and left IDLE the moment it asserted
+        // ARVALID, ignoring ARREADY entirely; that silently dropped/duplicated
+        // bursts whenever the instruction memory inserted any AR latency (which
+        // the SoC's zero-wait SRAM never did, but a realistic AXI slave -- e.g.
+        // the UVM instruction responder -- does), causing whole 4-instruction
+        // bursts to be skipped.
+        AR_WAIT: begin
+            if (branch_taken) begin
+                // A redirect arrived while we were still waiting for AR accept.
+                // Drop this fetch; re-issue from the branch target in IDLE.
+                fetch_pc_next = branch_immediate;
+                next_state    = IDLE;
+            end
+            else begin
+                ARVALID = 1'b1;                 // hold request stable
+                if (ARREADY) begin
+                    fetch_pc_next = fetch_pc + (BURST_LEN * 4);
+                    next_state    = FETCH;
+                end
             end
         end
 
