@@ -71,7 +71,7 @@ logic div_en;
 logic div_busy;
 logic div_done;
 logic div_stall;
-
+logic [3:0] store_wstrb;//added this whole block for sw variants
 assign dmem_stall = ex_memwb_r.mem_read && !dmem_rvalid;
 
 // Store completion tracking: a store stalls the pipeline until its B response
@@ -90,13 +90,14 @@ logic store_stall;
 // issue exactly once and a store frozen behind a following multi-cycle op
 // (mul/div) does not deadlock the pipeline.
 logic this_store_done;
-assign this_store_done = store_completed && (dmem_addr == AWADDR_D);
+assign this_store_done = store_completed && (dmem_addr  == AWADDR_D)
+                                         && (dmem_wdata == WDATA_D)
+                                         && (store_wstrb == WSTRB_D);
 assign store_stall = dmem_we && !this_store_done;
 // The cycle a completed store actually advances (store_completed high and the
 // pipeline not held by dmem/mul/div stalls), pulse advance_after_store so the
 // completed flag is cleared for the next store entering MEM.
 assign advance_after_store = store_completed && !dmem_stall && !mul_stall && !div_stall;
-
 // Pipeline structs
 typedef struct packed {
     logic [31:0] pc;
@@ -372,7 +373,6 @@ assign dmem_rdata  = RDATA_D;
 assign dmem_rvalid = RVALID_D;
 
 //// AXI4 Data Bus - Write channel
-logic [3:0] store_wstrb;//added this whole block for sw variants
 always_comb begin
     case (ex_memwb_r.funct3)
         3'b000: // SB - one byte lane
@@ -421,9 +421,8 @@ always_ff @(posedge clk) begin
         //   (b) one store frozen in MEM behind a following multiply -- dmem_addr
         //       stays the SAME, so store_completed stays set and the store is not
         //       re-issued on the bus while it waits to retire.
-        if (!dmem_we || (store_completed && dmem_addr != AWADDR_D))
-            store_completed <= 1'b0;
-
+          if (!dmem_we || (store_completed && !this_store_done))
+               store_completed <= 1'b0;
         // FIX: added "&& !store_completed". Previously a store re-issued whenever
         // (dmem_we && !store_inflight) held, which recurs every time store_inflight
         // clears while dmem_we is still asserted -- exactly what happens when the
