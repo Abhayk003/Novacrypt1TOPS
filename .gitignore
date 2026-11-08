@@ -20,3 +20,13 @@ vivado*.backup.*
 # OS
 .DS_Store
 Thumbs.db
+# Synopsys VCS generated files
+csrc/
+simv
+simv.daidir/
+ucli.key
+vc_hdrs.h
+vcs_sim/
+*.vpd
+*.fsdb
+*.vcd
