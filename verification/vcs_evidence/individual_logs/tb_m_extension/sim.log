@@ -1,0 +1,47 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/08/2026 15:44:15
+[SCL] 11/08/2026 15:44:15 PID:209205 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov  8 15:44 2026
+
+==== RV32I AXI4 DATAPATH TEST ====
+
+MUL  10*20=200 PASS
+MUL  10*(-3)=-30 PASS
+MUL  (-3)*(-3)=9 PASS
+MUL  INT32_MIN^2 low PASS
+MULH  10*20 hi=0 PASS
+MULH  10*(-3) hi=-1 PASS
+MULH  (-3)*(-3) hi=0 PASS
+MULH  INT32_MIN^2 hi PASS
+MULHU 10*20 hi=0 PASS
+MULHU 0x80000000^2 hi PASS
+MULHU 0xFFFFFFFD^2 hi PASS
+MULHSU s(10)*u(20) hi=0 PASS
+MULHSU s(-3)*u(0xFFFFFFFD) PASS
+MULHSU INT32_MIN*0x80000000 PASS
+DIV  10/20=0 PASS
+DIV  20/10=2 PASS
+DIV  -3/20=0 (trunc) PASS
+DIV  INT32_MIN/-3 PASS
+DIVU 10/20=0 PASS
+DIVU 0x80000000/10 PASS
+REM  10 rem 20=10 PASS
+REM  INT32_MIN rem -3=-2 PASS
+REM  -3 rem 20=-3 PASS
+REMU 0x80000000%20=8 PASS
+REMU 0xFFFFFFFD%10=3 PASS
+X0 PROTECTION PASS
+
+==== TEST COMPLETE ====
+
+$finish called from file "/home/synp11/projects/Novacrypt1TOPS/tb/tb_m_extension.sv", line 512.
+$finish at simulation time              3775000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3775000 ps
+CPU Time:      0.410 seconds;       Data structure size:   0.0Mb
+Sun Nov  8 15:44:15 2026
+[SCL] 11/08/2026 15:44:15 PID:209205 Client:icdserver.rvce.edu.in checkin (null) 

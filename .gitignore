@@ -30,3 +30,5 @@ vcs_sim/
 *.vpd
 *.fsdb
 *.vcd
+# Allow VCS verification evidence logs
+!verification/vcs_evidence/individual_logs/**/*.log

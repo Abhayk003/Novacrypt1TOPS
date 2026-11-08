@@ -1,0 +1,21 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/08/2026 15:43:09
+[SCL] 11/08/2026 15:43:09 PID:204490 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov  8 15:43 2026
+================================================================
+SPI_RX PASS
+  byte driven on MISO    : 0xc3
+  RX FIFO -> D-SRAM[0]   : 0x000000c3  (low byte 0xc3)
+  -> CS asserted, 8 SCLK clocks, MISO sampled, RXFIFO read OK
+================================================================
+$finish called from file "/home/synp11/projects/Novacrypt1TOPS/tb/tb_spi_rx.sv", line 81.
+$finish at simulation time              1415000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1415000 ps
+CPU Time:      0.390 seconds;       Data structure size:   0.9Mb
+Sun Nov  8 15:43:09 2026
+[SCL] 11/08/2026 15:43:09 PID:204490 Client:icdserver.rvce.edu.in checkin (null) 

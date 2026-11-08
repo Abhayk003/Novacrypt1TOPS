@@ -1,0 +1,57 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/08/2026 15:44:24
+[SCL] 11/08/2026 15:44:24 PID:209877 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov  8 15:44 2026
+
+==== RV32M EXTENSION TEST ====
+
+PASS  MUL   10*20=200  (x6 = 0x000000c8)
+PASS  MUL   10*(-3)=-30  (x7 = 0xffffffe2)
+PASS  MUL   (-3)*(-3)=9  (x8 = 0x00000009)
+PASS  MUL   INT32_MIN^2 lo=0  (x9 = 0x00000000)
+PASS  MUL   (-1)*(-1) lo=1      [corner]  (x10 = 0x00000001)
+PASS  MULH  10*20 hi=0  (x11 = 0x00000000)
+PASS  MULH  10*(-3) hi=-1  (x12 = 0xffffffff)
+PASS  MULH  (-3)*(-3) hi=0  (x13 = 0x00000000)
+PASS  MULH  INT32_MIN^2 hi=0x40000000  (x14 = 0x40000000)
+PASS  MULH  (-1)*(-1) hi=0     [corner]  (x15 = 0x00000000)
+PASS  MULHU 10*20 hi=0  (x16 = 0x00000000)
+PASS  MULHU 0x80000000^2 hi=0x40000000  (x17 = 0x40000000)
+PASS  MULHU 0xFFFFFFFD^2 hi=0xFFFFFFFA  (x18 = 0xfffffffa)
+PASS  MULHU 0xFFFFFFFF^2 hi=0xFFFFFFFE [corner]  (x19 = 0xfffffffe)
+PASS  MULHSU s(10)*u(20) hi=0  (x20 = 0x00000000)
+PASS  MULHSU s(-3)*u(0xFFFFFFFD) hi  (x21 = 0xfffffffd)
+PASS  MULHSU INT32_MIN*0x80000000 hi  (x22 = 0xc0000000)
+PASS  MULHSU s(-1)*u(20) hi=-1  [corner]  (x23 = 0xffffffff)
+PASS  DIV   10/20=0  (x24 = 0x00000000)
+PASS  DIV   20/10=2  (x25 = 0x00000002)
+PASS  DIV   -3/20=0 (trunc toward 0)  (x26 = 0x00000000)
+PASS  DIV   INT32_MIN/-3=715827882  (x27 = 0x2aaaaaaa)
+PASS  DIV   INT32_MIN/-1=INT32_MIN [corner: overflow]  (x28 = 0x80000000)
+PASS  DIV   10/0=0xFFFFFFFF      [corner: div/0]  (x29 = 0xffffffff)
+PASS  DIVU  10/20=0  (x30 = 0x00000000)
+PASS  DIVU  0x80000000/10=0x0CCCCCCC  (x31 = 0x0ccccccc)
+PASS  REM   10 rem 20=10  (x6 = 0x0000000a)
+PASS  REM   INT32_MIN rem -3=-2  (x7 = 0xfffffffe)
+PASS  REM   -3 rem 20=-3  (x8 = 0xfffffffd)
+PASS  REM   INT32_MIN rem -1=0  [corner: overflow rem]  (x9 = 0x00000000)
+PASS  REM   10 rem 0=10         [corner: rem/0]  (x10 = 0x0000000a)
+PASS  REMU  0x80000000%20=8  (x11 = 0x00000008)
+PASS  REMU  0xFFFFFFFD%10=3  (x12 = 0x00000003)
+PASS  REMU  0xFFFFFFFF%20=15   [corner]  (x13 = 0x0000000f)
+PASS  REMU  10 remu 0=10        [corner: remu/0]  (x14 = 0x0000000a)
+PASS  x0 hardwired zero  (x0 = 0x00000000)
+
+==== TEST COMPLETE ====
+
+$finish called from file "/home/synp11/projects/Novacrypt1TOPS/tb/tb_m_exten_corner.sv", line 326.
+$finish at simulation time              3705000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3705000 ps
+CPU Time:      0.360 seconds;       Data structure size:   0.0Mb
+Sun Nov  8 15:44:24 2026
+[SCL] 11/08/2026 15:44:24 PID:209877 Client:icdserver.rvce.edu.in checkin (null) 

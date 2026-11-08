@@ -1,0 +1,40 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/08/2026 15:43:50
+[SCL] 11/08/2026 15:43:50 PID:207188 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov  8 15:43 2026
+
+==== RV32I BRANCH + FORWARDING TEST ====
+
+PASS  BEQ  taken  : x4=1  (x4 = 0x00000001)
+PASS  BEQ  taken  : x5=0 (no poison)  (x5 = 0x00000000)
+PASS  BNE  taken  : x6=2  (x6 = 0x00000002)
+PASS  BNE  taken  : x7=0 (no poison)  (x7 = 0x00000000)
+PASS  BNE  !taken : x8=3  (x8 = 0x00000003)
+PASS  BNE  !taken : x9=4  (x9 = 0x00000004)
+PASS  BLT  taken  : x10=5  (x10 = 0x00000005)
+PASS  BLT  taken  : x11=0 (no poison)  (x11 = 0x00000000)
+PASS  BLT  !taken : x12=6  (x12 = 0x00000006)
+PASS  BLT  !taken : x13=7  (x13 = 0x00000007)
+PASS  BGE  taken  : x14=8  (x14 = 0x00000008)
+PASS  BGE  taken  : x15=0 (no poison)  (x15 = 0x00000000)
+PASS  BGE  !taken : x16=9  (x16 = 0x00000009)
+PASS  BGE  !taken : x17=10  (x17 = 0x0000000a)
+PASS  BLTU taken  : x20=11 [fwd]  (x20 = 0x0000000b)
+PASS  BLTU taken  : x21=0 (no poison)  (x21 = 0x00000000)
+PASS  BGEU taken  : x22=12 [fwd]  (x22 = 0x0000000c)
+PASS  BGEU taken  : x23=0 (no poison)  (x23 = 0x00000000)
+PASS  x0 hardwired zero  (x0 = 0x00000000)
+
+==== TEST COMPLETE ====
+
+$finish called from file "/home/synp11/projects/Novacrypt1TOPS/tb/branch_tb_corner.sv", line 318.
+$finish at simulation time               855000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 855000 ps
+CPU Time:      0.410 seconds;       Data structure size:   0.0Mb
+Sun Nov  8 15:43:50 2026
+[SCL] 11/08/2026 15:43:50 PID:207188 Client:icdserver.rvce.edu.in checkin (null) 

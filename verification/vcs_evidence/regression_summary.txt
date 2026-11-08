@@ -1,0 +1,31 @@
+TESTBENCH                STATUS       DETAIL
+------------------------ ------------ ------------------------
+tb_bytelen PASS Simulation and PASS marker verified
+tb_clint PASS Simulation and PASS marker verified
+tb_ecall PASS Simulation and PASS marker verified
+tb_gpio_irq PASS Simulation and PASS marker verified
+tb_gpio_sct PASS Simulation and PASS marker verified
+tb_i2c_burst PASS Simulation and PASS marker verified
+tb_i2c_rd PASS Simulation and PASS marker verified
+tb_i2c_wr PASS Simulation and PASS marker verified
+tb_rv_plic PASS Simulation and PASS marker verified
+tb_soc_stage2 PASS Simulation and PASS marker verified
+tb_soc_stage4 PASS Simulation and PASS marker verified
+tb_soc_stage5 PASS Simulation and PASS marker verified
+tb_soc_stage6 PASS Simulation and PASS marker verified
+tb_soc_stage7 PASS Simulation and PASS marker verified
+tb_soc_stage8 PASS Simulation and PASS marker verified
+tb_spi_burst PASS Simulation and PASS marker verified
+tb_spi_rx PASS Simulation and PASS marker verified
+tb_timer_repeat PASS Simulation and PASS marker verified
+tb_uart_rx PASS Simulation and PASS marker verified
+branch_tb PASS Simulation and PASS marker verified
+branch_tb_corner PASS Simulation and PASS marker verified
+datapath_tb_axi4 PASS Simulation and PASS marker verified
+tb_final PASS Simulation and PASS marker verified
+tb_m_extension PASS Simulation and PASS marker verified
+tb_m_exten_corner PASS Simulation and PASS marker verified
+
+============================================================
+TOTAL: 25  PASS: 25  FAIL: 0  SKIP: 0
+============================================================

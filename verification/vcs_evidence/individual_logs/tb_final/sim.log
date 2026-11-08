@@ -1,0 +1,72 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/08/2026 15:44:07
+[SCL] 11/08/2026 15:44:07 PID:208533 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov  8 15:44 2026
+
+====================================================================
+  RV32IM COMPREHENSIVE TESTBENCH  (no NOPs, hazard/fwd stress)
+====================================================================
+
+---- A. Setup & Forwarding Chain ----
+PASS  ADDI  x1=10                                    (x1 = 0x0000000a)
+PASS  ADDI  x2=20                                    (x2 = 0x00000014)
+PASS  ADDI  x3=-3 (0xFFFFFFFD)                       (x3 = 0xfffffffd)
+PASS  LUI   x4=0x80000000 (INT32_MIN)                (x4 = 0x80000000)
+PASS  ADDI  x5=-1 (0xFFFFFFFF)                       (x5 = 0xffffffff)
+
+---- B. Forwarding Chain (back-to-back RAW) ----
+PASS  ADD  x1=x1+x2 (10+20)   → x1=30  [EX-EX fwd]  (x1 = 0x0000001e)
+PASS  ADD  x2=x1+x1 (30+30)   → x2=60  [EX-EX fwd]  (x2 = 0x0000003c)
+PASS  SUB  x4=x2-x1 (60-30)   → x4=30  [EX-EX fwd]  (x4 = 0x0000001e)
+PASS  ADD  x3=x4+x2 (30+60)   → x3=90  [EX-EX fwd]  (x3 = 0x0000005a)
+PASS  ADD  x1=x2+x3 (60+90)   → x1=150 [EX-EX fwd]  (x1 = 0x00000096)
+PASS  ADDI  x1=10                                    (x1 = 0x0000000a)
+PASS  ADDI  x2=20                                    (x2 = 0x00000014)
+PASS  ADDI  x3=-3 (0xFFFFFFFD)                       (x3 = 0xfffffffd)
+PASS  LUI   x4=0x80000000 (INT32_MIN)                (x4 = 0x80000000)
+PASS  ADDI  x5=-1 (0xFFFFFFFF)                       (x5 = 0xffffffff)
+
+---- C. Load-use Hazards ----
+PASS  LW    x16=dmem[0]=0xDEADBEEF (reload)          (x16 = 0xdeadbeef)
+PASS  LW+ADD  x16=0xDEADBEEF+0xDEADBEEF → 0xBD5B7DDE  [load-use]  (x16 = 0xbd5b7dde)
+PASS  LBU     x17=dmem[0] byte0=0xEF (zero-ext)      (x17 = 0x000000ef)
+PASS  ADD                                            (x18 = 0x000001de)
+PASS  LH+ADD  x18=0xFFFFBEEF+0xFFFFBEEF → 0xFFFF7DDE  [load-use]  (x18 = 0xffff7dde)
+PASS  LW      x16 restored = 0xDEADBEEF              (x16 = 0xdeadbeef)
+PASS  LW      x17=dmem[1]=0xABCD1234  [back-to-back loads]  (x17 = 0xabcd1234)
+PASS  ADD     x22=x17+x17=0x579A2468  [load-use of x17]  (x22 = 0x579a2468)
+PASS  ADD     x23=x16+x16=0xBD5B7DDE  [MEM-EX fwd of x16]  (x23 = 0xbd5b7dde)
+
+---- D. Branch Tests ----
+PASS  BEQ   taken  → x24=1 (poison=0)              (x24 = 0x00000001)
+PASS  BNE   taken  → x25=2                         (x25 = 0x00000002)
+PASS  BNE  !taken  → x26=4 (fall-thru)             (x26 = 0x00000004)
+PASS  BLT   taken  → x27=5                         (x27 = 0x00000005)
+PASS  BGE   taken  → x28=14 (JALR overwrites)      (x28 = 0x0000000e)
+PASS  BGE   taken  → x29=8 (then MULH overwrites)  (x29 = 0x00000008)
+PASS  BGE  !taken  → x30=10 (fall-thru)            (x30 = 0x0000000a)
+PASS  BLTU  taken  → x31=11                        (x31 = 0x0000000b)
+PASS  BGEU  taken+fwd, then REMU×2 → x6=12        (x6 = 0x0000000c)
+
+---- E. JAL / JALR ----
+PASS  JAL   target → x7=13                         (x7 = 0x0000000d)
+PASS  JAL   link   → x26 nonzero (PC+4)            (x26 = 0x000000dc, nonzero)
+
+---- x0 protection ----
+PASS  x0 hardwired zero                              (x0 = 0x00000000)
+
+====================================================================
+  TEST COMPLETE
+====================================================================
+
+$finish called from file "/home/synp11/projects/Novacrypt1TOPS/tb/tb_final.sv", line 443.
+$finish at simulation time              1545000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1545000 ps
+CPU Time:      0.390 seconds;       Data structure size:   0.0Mb
+Sun Nov  8 15:44:07 2026
+[SCL] 11/08/2026 15:44:07 PID:208533 Client:icdserver.rvce.edu.in checkin (null) 

@@ -1,0 +1,21 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/08/2026 15:41:20
+[SCL] 11/08/2026 15:41:20 PID:198405 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov  8 15:41 2026
+================================================================
+I2C_WR PASS
+  slave 0x44 ACKed addr+data; captured byte 0x5e
+  program completed (D-SRAM[0]=0x00000123)
+  -> START, addr+W, ACK, data, ACK, STOP verified
+================================================================
+$finish called from file "/home/synp11/projects/Novacrypt1TOPS/tb/tb_i2c_wr.sv", line 62.
+$finish at simulation time             11735000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 11735000 ps
+CPU Time:      0.450 seconds;       Data structure size:   0.9Mb
+Sun Nov  8 15:41:21 2026
+[SCL] 11/08/2026 15:41:21 PID:198405 Client:icdserver.rvce.edu.in checkin (null) 
