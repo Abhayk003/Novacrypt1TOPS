@@ -36,7 +36,7 @@ module sram #(
     logic [AddrBits-1:0] word_addr;
     assign word_addr = addr_i[AddrBits+1:2];
 
-    always_ff @(posedge clk_i or negedge rst_ni) begin
+    always @(posedge clk_i or negedge rst_ni) begin
         if (!rst_ni) begin
             rvalid_o <= 1'b0;
         end else begin
