@@ -115,7 +115,7 @@ assign ARREADY_D = 1'b1;
 assign AWREADY_D = 1'b1;
 assign WREADY_D  = 1'b1;
 
-always_ff @(posedge clk) begin
+always @(posedge clk) begin
     if (reset) begin
         RVALID_D          <= 0;
         RDATA_D           <= 0;
