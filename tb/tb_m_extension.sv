@@ -78,7 +78,7 @@ logic [2:0]  ibus_beat;
 logic [1:0]  ibus_delay;
 
 
-assign ARREADY_I = 1'b1;
+//assign ARREADY_I = 1'b1;
 
 always_ff @(posedge clk) begin
     if (reset) begin
@@ -130,7 +130,7 @@ assign ARREADY_D = 1'b1;
 assign AWREADY_D = 1'b1;
 assign WREADY_D  = 1'b1;
 
-always_ff @(posedge clk) begin
+always @(posedge clk) begin
     if (reset) begin
         RVALID_D       <= 0;
         RDATA_D        <= 0;
