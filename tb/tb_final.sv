@@ -425,7 +425,7 @@ wait_reg(23, 32'hBD5B7DDE,   "ADD     x23=x16+x16=0xBD5B7DDE  [MEM-EX fwd of x16
     wait_reg(29, 32'd8,          "BGE   taken  → x29=8 (then MULH overwrites)",  250);
     wait_reg(30, 32'd10,         "BGE  !taken  → x30=10 (fall-thru)",      180);
     wait_reg(31, 32'd11,         "BLTU  taken  → x31=11",                  180);
-    wait_reg( 6, 32'h0000000c,   "BGEU  taken+fwd, then REMU×2 → x6=23",  300);
+    wait_reg( 6, 32'h0000000c,   "BGEU  taken+fwd, then REMU×2 → x6=12",  300);
 
     // ── E. JAL / JALR ────────────────────────────────────────────────────────
     $display("\n---- E. JAL / JALR ----");
