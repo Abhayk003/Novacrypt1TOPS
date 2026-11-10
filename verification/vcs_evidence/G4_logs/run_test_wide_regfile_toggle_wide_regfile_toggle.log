@@ -1,0 +1,126 @@
+Command: /home/synp11/test_ssn/uvm_tb/./simv +UVM_TESTNAME=test_wide_regfile_toggle +PROG_NAME=wide_regfile_toggle -cm line+cond+fsm+tgl+branch -cm_dir ./cm.vdb -cm_name test_wide_regfile_toggle_wide_regfile_toggle -l run_test_wide_regfile_toggle_wide_regfile_toggle.log
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov 10 05:38 2026
+UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test_wide_regfile_toggle...
+UVM_INFO axi_instr_monitor.sv(95) @ 0: uvm_test_top.env.instr_agt.mon [INSTR_MON] Instruction monitor run_phase started
+UVM_INFO axi_data_monitor.sv(308) @ 745000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020000 data=00000010 strb=f @745000
+UVM_INFO axi_data_monitor.sv(308) @ 825000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020004 data=fffffff2 strb=f @825000
+UVM_INFO axi_data_monitor.sv(308) @ 905000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020008 data=0000000e strb=f @905000
+UVM_INFO axi_data_monitor.sv(308) @ 985000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002000c data=00000012 strb=f @985000
+UVM_INFO axi_data_monitor.sv(308) @ 1045000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020010 data=fffffff2 strb=f @1045000
+UVM_INFO axi_data_monitor.sv(308) @ 1125000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020014 data=00000012 strb=f @1125000
+UVM_INFO axi_data_monitor.sv(308) @ 1185000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020018 data=00000004 strb=f @1185000
+UVM_INFO axi_data_monitor.sv(308) @ 1265000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002001c data=ffffffe0 strb=f @1265000
+UVM_INFO axi_data_monitor.sv(308) @ 1325000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020020 data=ffffffe0 strb=f @1325000
+UVM_INFO axi_data_monitor.sv(308) @ 1405000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020024 data=fffffff6 strb=f @1405000
+UVM_INFO axi_data_monitor.sv(308) @ 1475000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020028 data=ffffffee strb=f @1475000
+UVM_INFO axi_data_monitor.sv(308) @ 1555000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002002c data=fffffff6 strb=f @1555000
+UVM_INFO axi_data_monitor.sv(308) @ 1615000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020030 data=ffffffd6 strb=f @1615000
+UVM_INFO axi_data_monitor.sv(308) @ 1685000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020034 data=ffffffea strb=f @1685000
+UVM_INFO axi_data_monitor.sv(308) @ 1755000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020038 data=00000016 strb=f @1755000
+UVM_INFO axi_data_monitor.sv(308) @ 1825000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002003c data=ffffffc4 strb=f @1825000
+UVM_INFO axi_data_monitor.sv(308) @ 1885000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020040 data=00000018 strb=f @1885000
+UVM_INFO axi_data_monitor.sv(308) @ 1945000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020044 data=00000038 strb=f @1945000
+UVM_INFO axi_data_monitor.sv(308) @ 2005000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020048 data=ffffffae strb=f @2005000
+UVM_INFO axi_data_monitor.sv(308) @ 2085000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002004c data=00000026 strb=f @2085000
+UVM_INFO axi_data_monitor.sv(308) @ 2155000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020050 data=0000002e strb=f @2155000
+UVM_INFO axi_data_monitor.sv(308) @ 2215000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020054 data=ffffffc6 strb=f @2215000
+UVM_INFO axi_data_monitor.sv(308) @ 2285000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020058 data=0000006a strb=f @2285000
+UVM_INFO axi_data_monitor.sv(308) @ 2345000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002005c data=ffffffb6 strb=f @2345000
+UVM_INFO axi_data_monitor.sv(308) @ 2415000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020060 data=ffffffec strb=f @2415000
+UVM_INFO axi_data_monitor.sv(308) @ 2475000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020064 data=00000060 strb=f @2475000
+UVM_INFO axi_data_monitor.sv(308) @ 2535000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020068 data=ffffffe0 strb=f @2535000
+UVM_INFO axi_data_monitor.sv(308) @ 2605000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002006c data=00000056 strb=f @2605000
+UVM_INFO axi_data_monitor.sv(308) @ 2685000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020070 data=0000007e strb=f @2685000
+UVM_INFO axi_data_monitor.sv(308) @ 2765000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020074 data=ffffff86 strb=f @2765000
+UVM_INFO axi_data_monitor.sv(308) @ 2845000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020078 data=000000b6 strb=f @2845000
+UVM_INFO axi_data_monitor.sv(308) @ 2905000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002007c data=0000000a strb=f @2905000
+UVM_INFO axi_data_monitor.sv(308) @ 2965000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020080 data=00000036 strb=f @2965000
+UVM_INFO axi_data_monitor.sv(308) @ 3045000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020084 data=00000134 strb=f @3045000
+UVM_INFO axi_data_monitor.sv(308) @ 3125000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020088 data=ffffffc8 strb=f @3125000
+UVM_INFO axi_data_monitor.sv(308) @ 3205000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002008c data=000000c8 strb=f @3205000
+UVM_INFO axi_data_monitor.sv(308) @ 3285000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020090 data=0000013e strb=f @3285000
+UVM_INFO axi_data_monitor.sv(308) @ 3365000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020094 data=fffffed6 strb=f @3365000
+UVM_INFO axi_data_monitor.sv(308) @ 3435000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020098 data=0000013e strb=f @3435000
+UVM_INFO axi_data_monitor.sv(308) @ 3505000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002009c data=00000106 strb=f @3505000
+UVM_INFO axi_data_monitor.sv(308) @ 3565000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200a0 data=fffffe8a strb=f @3565000
+UVM_INFO axi_data_monitor.sv(308) @ 3635000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200a4 data=fffffef6 strb=f @3635000
+UVM_INFO axi_data_monitor.sv(308) @ 3695000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200a8 data=ffffffdc strb=f @3695000
+UVM_INFO axi_data_monitor.sv(308) @ 3755000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200ac data=fffffdd0 strb=f @3755000
+UVM_INFO axi_data_monitor.sv(308) @ 3835000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200b0 data=ffffffd0 strb=f @3835000
+UVM_INFO axi_data_monitor.sv(308) @ 3915000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200b4 data=fffffe66 strb=f @3915000
+UVM_INFO axi_data_monitor.sv(308) @ 3975000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200b8 data=fffffeae strb=f @3975000
+UVM_INFO axi_data_monitor.sv(308) @ 4055000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200bc data=00000156 strb=f @4055000
+UVM_INFO axi_data_monitor.sv(308) @ 4115000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200c0 data=fffffebb strb=f @4115000
+UVM_INFO axi_data_monitor.sv(308) @ 4185000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200c4 data=00000067 strb=f @4185000
+UVM_INFO axi_data_monitor.sv(308) @ 4255000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200c8 data=00000035 strb=f @4255000
+UVM_INFO axi_data_monitor.sv(308) @ 4335000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200cc data=0000004b strb=f @4335000
+UVM_INFO axi_data_monitor.sv(308) @ 4395000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200d0 data=0000006b strb=f @4395000
+UVM_INFO axi_data_monitor.sv(308) @ 4455000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200d4 data=0000008d strb=f @4455000
+UVM_INFO axi_data_monitor.sv(308) @ 4525000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200d8 data=00000083 strb=f @4525000
+UVM_INFO axi_data_monitor.sv(308) @ 4595000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200dc data=0000000b strb=f @4595000
+UVM_INFO axi_data_monitor.sv(308) @ 4655000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200e0 data=00000035 strb=f @4655000
+UVM_INFO axi_data_monitor.sv(308) @ 4725000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200e4 data=ffffffdb strb=f @4725000
+UVM_INFO axi_data_monitor.sv(308) @ 4795000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200e8 data=0000008b strb=f @4795000
+UVM_INFO axi_data_monitor.sv(308) @ 4855000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200ec data=0000011d strb=f @4855000
+UVM_INFO axi_data_monitor.sv(308) @ 4925000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200f0 data=00000193 strb=f @4925000
+UVM_INFO axi_data_monitor.sv(308) @ 4995000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200f4 data=ffffff4b strb=f @4995000
+UVM_INFO axi_data_monitor.sv(308) @ 5075000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200f8 data=00000025 strb=f @5075000
+UVM_INFO axi_data_monitor.sv(308) @ 5145000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=000200fc data=000001ab strb=f @5145000
+UVM_INFO axi_data_monitor.sv(308) @ 5205000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020000 data=fffffed6 strb=f @5205000
+UVM_INFO axi_data_monitor.sv(308) @ 5325000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020100 data=fffffed6 strb=f @5325000
+UVM_INFO axi_data_monitor.sv(308) @ 5385000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020104 data=ffffffe0 strb=f @5385000
+UVM_INFO proc_base_vseq.sv(38) @ 1999995000: vseqr@@vseq [PROC_VSEQ] ran for the configured 200000-cycle timeout; handing off to scoreboard check_phase
+UVM_INFO proc_scoreboard.sv(299) @ 1999995000: uvm_test_top.env.sb [PROC_SB] final DMEM matches live golden model
+UVM_INFO proc_scoreboard.sv(253) @ 1999995000: uvm_test_top.env.sb [PROC_SB] scoreboard summary: 68 live bus events checked, 0 mismatches
+UVM_INFO proc_coverage.sv(738) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
+UVM_INFO proc_coverage.sv(742) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] RV32IM FUNCTIONAL COVERAGE
+UVM_INFO proc_coverage.sv(746) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cg_variant coverage = 25.53%
+UVM_INFO proc_coverage.sv(750) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cp_variant coverage = 25.53%
+UVM_INFO proc_coverage.sv(754) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
+UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 1999995000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   78
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[FUNC_COV]     5
+[INSTR_MON]     1
+[MON_CAP]    67
+[PROC_SB]     2
+[PROC_VSEQ]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "/home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time           1999995000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1999995000 ps
+CPU Time:      3.370 seconds;       Data structure size:   0.7Mb
+Tue Nov 10 05:38:43 2026

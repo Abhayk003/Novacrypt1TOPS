@@ -1,0 +1,58 @@
+Command: /home/synp11/test_ssn/uvm_tb/./simv +UVM_TESTNAME=test_imem_bit12_toggle +PROG_NAME=imem_bit12_toggle -cm line+cond+fsm+tgl+branch -cm_dir ./cm.vdb -cm_name test_imem_bit12_toggle_imem_bit12_toggle -l run_test_imem_bit12_toggle_imem_bit12_toggle.log
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov 10 05:38 2026
+UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test_imem_bit12_toggle...
+UVM_INFO axi_instr_monitor.sv(95) @ 0: uvm_test_top.env.instr_agt.mon [INSTR_MON] Instruction monitor run_phase started
+UVM_INFO proc_base_vseq.sv(38) @ 1999995000: vseqr@@vseq [PROC_VSEQ] ran for the configured 200000-cycle timeout; handing off to scoreboard check_phase
+UVM_INFO proc_scoreboard.sv(299) @ 1999995000: uvm_test_top.env.sb [PROC_SB] final DMEM matches live golden model
+UVM_INFO proc_scoreboard.sv(253) @ 1999995000: uvm_test_top.env.sb [PROC_SB] scoreboard summary: 0 live bus events checked, 0 mismatches
+UVM_INFO proc_coverage.sv(738) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
+UVM_INFO proc_coverage.sv(742) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] RV32IM FUNCTIONAL COVERAGE
+UVM_INFO proc_coverage.sv(746) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cg_variant coverage = 4.26%
+UVM_INFO proc_coverage.sv(750) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cp_variant coverage = 4.26%
+UVM_INFO proc_coverage.sv(754) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
+UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 1999995000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   11
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[FUNC_COV]     5
+[INSTR_MON]     1
+[PROC_SB]     2
+[PROC_VSEQ]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "/home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time           1999995000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1999995000 ps
+CPU Time:      3.230 seconds;       Data structure size:   0.7Mb
+Tue Nov 10 05:39:04 2026

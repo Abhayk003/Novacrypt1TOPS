@@ -1,0 +1,68 @@
+Command: /home/synp11/test_ssn/uvm_tb/./simv +UVM_TESTNAME=test_store_load_fwd +PROG_NAME=store_load_fwd -cm line+cond+fsm+tgl+branch -cm_dir ./cm.vdb -cm_name test_store_load_fwd_store_load_fwd -l run_test_store_load_fwd_store_load_fwd.log
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov 10 05:37 2026
+UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test_store_load_fwd...
+UVM_INFO axi_instr_monitor.sv(95) @ 0: uvm_test_top.env.instr_agt.mon [INSTR_MON] Instruction monitor run_phase started
+UVM_INFO axi_data_monitor.sv(308) @ 195000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020000 data=0000007e strb=f @195000
+UVM_INFO axi_data_monitor.sv(308) @ 315000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020004 data=0000007e strb=f @315000
+UVM_INFO axi_data_monitor.sv(308) @ 395000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020008 data=ffffffff strb=1 @395000
+UVM_INFO axi_data_monitor.sv(308) @ 515000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002000c data=000000ff strb=f @515000
+UVM_INFO axi_data_monitor.sv(308) @ 575000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020010 data=02340234 strb=3 @575000
+UVM_INFO axi_data_monitor.sv(308) @ 705000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020014 data=00000234 strb=f @705000
+UVM_INFO axi_data_monitor.sv(308) @ 775000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020018 data=00000111 strb=f @775000
+UVM_INFO axi_data_monitor.sv(308) @ 855000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020018 data=00000222 strb=f @855000
+UVM_INFO axi_data_monitor.sv(308) @ 955000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002001c data=00000222 strb=f @955000
+UVM_INFO proc_base_vseq.sv(38) @ 1999995000: vseqr@@vseq [PROC_VSEQ] ran for the configured 200000-cycle timeout; handing off to scoreboard check_phase
+UVM_INFO proc_scoreboard.sv(299) @ 1999995000: uvm_test_top.env.sb [PROC_SB] final DMEM matches live golden model
+UVM_INFO proc_scoreboard.sv(253) @ 1999995000: uvm_test_top.env.sb [PROC_SB] scoreboard summary: 13 live bus events checked, 0 mismatches
+UVM_INFO proc_coverage.sv(738) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
+UVM_INFO proc_coverage.sv(742) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] RV32IM FUNCTIONAL COVERAGE
+UVM_INFO proc_coverage.sv(746) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cg_variant coverage = 17.02%
+UVM_INFO proc_coverage.sv(750) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cp_variant coverage = 17.02%
+UVM_INFO proc_coverage.sv(754) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
+UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 1999995000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   20
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[FUNC_COV]     5
+[INSTR_MON]     1
+[MON_CAP]     9
+[PROC_SB]     2
+[PROC_VSEQ]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "/home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time           1999995000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1999995000 ps
+CPU Time:      3.530 seconds;       Data structure size:   0.7Mb
+Tue Nov 10 05:37:57 2026
