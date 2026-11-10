@@ -33,3 +33,4 @@ vcs_sim/
 # Allow VCS verification evidence logs
 !verification/vcs_evidence/individual_logs/**/*.log
 !verification/vcs_evidence/G4_logs/*.log
+!verification/vcs_evidence/G4_logs/**/*.log
