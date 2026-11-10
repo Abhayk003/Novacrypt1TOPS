@@ -1,0 +1,36 @@
+<session version="1.1" release="R-2020.12-SP2-1" timestp="2026-11-10 10:39:13 GMT">
+  <info>
+    <attr name="datetime" value="Tue Nov 10 05:39:16 2026
+"/>
+    <attr name="command" value="urg -dir ./cm.vdb -metric group -group ratio -show ratios -report funcReport"/>
+    <attr name="top_instance" value="tb_top"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Group" type="ratio" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Group" value="99/99" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="proc_pkg::proc_coverage::cg_irq">
+      <metric name="Group" value="18/18" />
+    </scope>
+    <scope type="group" name="proc_pkg::proc_coverage::cg_variant">
+      <metric name="Group" value="47/47" />
+    </scope>
+    <scope type="group" name="proc_pkg::proc_coverage::cg_data_bus">
+      <metric name="Group" value="24/24" />
+    </scope>
+    <scope type="group" name="proc_pkg::proc_coverage::cg_instr_bus">
+      <metric name="Group" value="10/10" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+  </scope>
+  </old_coverage>
+</session>
