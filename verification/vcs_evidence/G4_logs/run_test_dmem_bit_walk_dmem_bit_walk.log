@@ -1,7 +1,7 @@
 Command: /home/synp11/test_ssn/uvm_tb/./simv +UVM_TESTNAME=test_dmem_bit_walk +PROG_NAME=dmem_bit_walk -cm line+cond+fsm+tgl+branch -cm_dir ./cm.vdb -cm_name test_dmem_bit_walk_dmem_bit_walk -l run_test_dmem_bit_walk_dmem_bit_walk.log
 Chronologic VCS simulator copyright 1991-2020
 Contains Synopsys proprietary information.
-Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov 10 05:38 2026
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov 10 07:29 2026
 UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2.Synopsys
@@ -104,8 +104,6 @@ UVM_INFO axi_data_monitor.sv(308) @ 51595000: uvm_test_top.env.data_agt.mon [MON
 UVM_INFO axi_data_monitor.sv(308) @ 52325000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020118 data=00ff00ff strb=f @52325000
 UVM_INFO axi_data_monitor.sv(308) @ 53095000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=0002011c data=ff00ff00 strb=f @53095000
 UVM_INFO axi_data_monitor.sv(308) @ 53765000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=10010000 data=00000000 strb=f @53765000
-UVM_ERROR proc_golden_ref.sv(91) @ 53845000: uvm_test_top.env.golden_ref [GOLDEN_REF] Python golden model error: ERR,{"ok":false,"error":"MemoryAccessError: Access at 0x10010000 falls outside all modeled memory regions (Boot ROM / IMEM / DMEM)."}
-
 UVM_INFO axi_data_monitor.sv(308) @ 53875000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020200 data=ff00ff00 strb=f @53875000
 UVM_INFO axi_data_monitor.sv(308) @ 53965000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020000 data=ff00ff00 strb=f @53965000
 UVM_INFO axi_data_monitor.sv(308) @ 54095000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020000 data=ff00ff00 strb=f @54095000
@@ -119,7 +117,7 @@ UVM_INFO axi_data_monitor.sv(308) @ 54705000: uvm_test_top.env.data_agt.mon [MON
 UVM_INFO axi_data_monitor.sv(308) @ 54775000: uvm_test_top.env.data_agt.mon [MON_CAP] captured WRITE addr=00020308 data=000000a5 strb=f @54775000
 UVM_INFO proc_base_vseq.sv(38) @ 1999995000: vseqr@@vseq [PROC_VSEQ] ran for the configured 200000-cycle timeout; handing off to scoreboard check_phase
 UVM_INFO proc_scoreboard.sv(299) @ 1999995000: uvm_test_top.env.sb [PROC_SB] final DMEM matches live golden model
-UVM_INFO proc_scoreboard.sv(253) @ 1999995000: uvm_test_top.env.sb [PROC_SB] scoreboard summary: 1048 live bus events checked, 0 mismatches
+UVM_INFO proc_scoreboard.sv(253) @ 1999995000: uvm_test_top.env.sb [PROC_SB] scoreboard summary: 1049 live bus events checked, 0 mismatches
 UVM_INFO proc_coverage.sv(738) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] ============================================
 UVM_INFO proc_coverage.sv(742) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] RV32IM FUNCTIONAL COVERAGE
 UVM_INFO proc_coverage.sv(746) @ 1999995000: uvm_test_top.env.cov [FUNC_COV] cg_variant coverage = 23.40%
@@ -131,11 +129,10 @@ UVM_INFO /home/install/synopsys/vcs/R-2020.12-SP2-1/etc/uvm-1.2/base/uvm_report_
 ** Report counts by severity
 UVM_INFO :  104
 UVM_WARNING :    0
-UVM_ERROR :    1
+UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
 [FUNC_COV]     5
-[GOLDEN_REF]     1
 [INSTR_MON]     1
 [MON_CAP]    93
 [PROC_SB]     2
@@ -151,5 +148,5 @@ VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitor
 ---------------------------------------------------------------------------
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 1999995000 ps
-CPU Time:      3.670 seconds;       Data structure size:   0.7Mb
-Tue Nov 10 05:38:49 2026
+CPU Time:      3.530 seconds;       Data structure size:   0.7Mb
+Tue Nov 10 07:29:28 2026
