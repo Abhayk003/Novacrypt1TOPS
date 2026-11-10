@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Group :: proc_pkg::proc_coverage::cg_data_bus</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Group : proc_pkg::proc_coverage::cg_data_bus</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | hierarchy | modlist | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | asserts
+<div style="float:right; display:inline; cursor:pointer; width: 90px;">
+<a title="Hide Ratios" onClick="showHideRatios(this);">Hide Ratios</a>
+</div>
+</div>
+
+</div>
+<div class="ui-layout-west">
+<div>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group : <a href="#"  onclick="showContent('proc_pkg::proc_coverage::cg_data_bus')">proc_pkg::proc_coverage::cg_data_bus</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>INSTANCES</td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>PER INSTANCE</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/synp11/test_ssn/uvm_tb/proc_coverage.sv')">/home/synp11/test_ssn/uvm_tb/proc_coverage.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>1 Instances:</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="wht cl wordwrap"><a href="grp2.html#inst_tag_tb_top.me.obj.cg_data_bus"  onclick="showContent('tb_top.me.obj.cg_data_bus')">tb_top.me.obj.cg_data_bus</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group   proc_pkg::proc_coverage::cg_data_bus
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td><a href="#var_tbl_proc_pkg::proc_coverage::cg_data_bus" >Variables</a></td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">14</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td><a href="#crs_tbl_proc_pkg::proc_coverage::cg_data_bus" >Crosses</a></td>
+<td class="rt">10</td>
+<td class="rt">0</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_proc_pkg::proc_coverage::cg_data_bus">Variables for Group  proc_pkg::proc_coverage::cg_data_bus
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_dir"  onclick="checkLink(this)" target="detailFrame">cp_dir</a></td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_resp"  onclick="checkLink(this)" target="detailFrame">cp_resp</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_align"  onclick="checkLink(this)" target="detailFrame">cp_align</a></td>
+<td class="rt">4</td>
+<td class="rt">0</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_wstrb"  onclick="checkLink(this)" target="detailFrame">cp_wstrb</a></td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="crs_tbl_proc_pkg::proc_coverage::cg_data_bus">Crosses for Group  proc_pkg::proc_coverage::cg_data_bus
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CROSS</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>PRINT MISSING</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_resp"  onclick="checkLink(this)" target="detailFrame">cx_dir_resp</a></td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_align"  onclick="checkLink(this)" target="detailFrame">cx_dir_align</a></td>
+<td class="rt">8</td>
+<td class="rt">0</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+<div name='tb_top.me.obj.cg_data_bus'>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus"></a>
+<hr>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group Instance : <a href="groups.html#tag_tb_top.me.obj.cg_data_bus" >tb_top.me.obj.cg_data_bus</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group Instance   tb_top.me.obj.cg_data_bus
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td><a href="#var_tbl_tb_top.me.obj.cg_data_bus" >Variables</a></td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">14</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td><a href="#crs_tbl_tb_top.me.obj.cg_data_bus" >Crosses</a></td>
+<td class="rt">10</td>
+<td class="rt">0</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_tb_top.me.obj.cg_data_bus">Variables for Group Instance  tb_top.me.obj.cg_data_bus
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_dir"  onclick="checkLink(this)" target="detailFrame">cp_dir</a></td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_resp"  onclick="checkLink(this)" target="detailFrame">cp_resp</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_align"  onclick="checkLink(this)" target="detailFrame">cp_align</a></td>
+<td class="rt">4</td>
+<td class="rt">0</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_wstrb"  onclick="checkLink(this)" target="detailFrame">cp_wstrb</a></td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="crs_tbl_tb_top.me.obj.cg_data_bus">Crosses for Group Instance  tb_top.me.obj.cg_data_bus
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CROSS</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>PRINT MISSING</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_resp"  onclick="checkLink(this)" target="detailFrame">cx_dir_resp</a></td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_align"  onclick="checkLink(this)" target="detailFrame">cx_dir_align</a></td>
+<td class="rt">8</td>
+<td class="rt">0</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='proc_pkg::proc_coverage::cg_data_bus'>
+<br clear=all>
+<a name="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_dir"></a><span class="repname" id="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_dir">Summary for Variable cp_dir</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_dir</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write</td>
+<td class="rt">6572</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td class="rt">9829</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_resp"></a><span class="repname" id="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_resp">Summary for Variable cp_resp</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_resp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>okay</td>
+<td class="rt">16401</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_align"></a><span class="repname" id="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_align">Summary for Variable cp_align</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">4</td>
+<td class="rt">0</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_align</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>offset_3</td>
+<td class="rt">2045</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>offset_2</td>
+<td class="rt">4090</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>offset_1</td>
+<td class="rt">2045</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>word_aligned</td>
+<td class="rt">8221</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_wstrb"></a><span class="repname" id="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_wstrb">Summary for Variable cp_wstrb</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_wstrb</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>word</td>
+<td class="rt">2132</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>halfword_high</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>halfword_low</td>
+<td class="rt">635</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte3</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte2</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte1</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte0</td>
+<td class="rt">1269</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_resp"></a><span class="repname" id="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_resp">Summary for Cross cx_dir_resp</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_dir cp_resp<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cx_dir_resp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_dir</td><td class="alfsrt">cp_resp</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write</td>
+<td>okay</td>
+<td class="rt">6572</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>okay</td>
+<td class="rt">9829</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_align"></a><span class="repname" id="inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_align">Summary for Cross cx_dir_align</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_dir cp_align<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">8</td>
+<td class="rt">0</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cx_dir_align</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_dir</td><td class="alfsrt">cp_align</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write</td>
+<td>offset_3</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write</td>
+<td>offset_2</td>
+<td class="rt">1268</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write</td>
+<td>offset_1</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write</td>
+<td>word_aligned</td>
+<td class="rt">4036</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>offset_3</td>
+<td class="rt">1411</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>offset_2</td>
+<td class="rt">2822</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>offset_1</td>
+<td class="rt">1411</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>word_aligned</td>
+<td class="rt">4185</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+</div>
+<div name='tb_top.me.obj.cg_data_bus'>
+<br clear=all>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus.cp_dir"></a><span class="repname" id="inst_tag_tb_top.me.obj.cg_data_bus.cp_dir">Summary for Variable cp_dir</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_dir</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write</td>
+<td class="rt">6572</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td class="rt">9829</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus.cp_resp"></a><span class="repname" id="inst_tag_tb_top.me.obj.cg_data_bus.cp_resp">Summary for Variable cp_resp</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_resp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>okay</td>
+<td class="rt">16401</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus.cp_align"></a><span class="repname" id="inst_tag_tb_top.me.obj.cg_data_bus.cp_align">Summary for Variable cp_align</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">4</td>
+<td class="rt">0</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_align</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>offset_3</td>
+<td class="rt">2045</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>offset_2</td>
+<td class="rt">4090</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>offset_1</td>
+<td class="rt">2045</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>word_aligned</td>
+<td class="rt">8221</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus.cp_wstrb"></a><span class="repname" id="inst_tag_tb_top.me.obj.cg_data_bus.cp_wstrb">Summary for Variable cp_wstrb</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_wstrb</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>word</td>
+<td class="rt">2132</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>halfword_high</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>halfword_low</td>
+<td class="rt">635</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte3</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte2</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte1</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>byte0</td>
+<td class="rt">1269</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_resp"></a><span class="repname" id="inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_resp">Summary for Cross cx_dir_resp</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_dir cp_resp<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cx_dir_resp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_dir</td><td class="alfsrt">cp_resp</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write</td>
+<td>okay</td>
+<td class="rt">6572</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>okay</td>
+<td class="rt">9829</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_align"></a><span class="repname" id="inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_align">Summary for Cross cx_dir_align</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_dir cp_align<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">8</td>
+<td class="rt">0</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cx_dir_align</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_dir</td><td class="alfsrt">cp_align</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write</td>
+<td>offset_3</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write</td>
+<td>offset_2</td>
+<td class="rt">1268</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write</td>
+<td>offset_1</td>
+<td class="rt">634</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write</td>
+<td>word_aligned</td>
+<td class="rt">4036</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>offset_3</td>
+<td class="rt">1411</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>offset_2</td>
+<td class="rt">2822</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>offset_1</td>
+<td class="rt">1411</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read</td>
+<td>word_aligned</td>
+<td class="rt">4185</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="proc_pkg::proc_coverage::cg_data_bus">
+    <li>
+      <a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_dir">Variable : cp_dir</a>    </li>
+    <li>
+      <a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_resp">Variable : cp_resp</a>    </li>
+    <li>
+      <a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_align">Variable : cp_align</a>    </li>
+    <li>
+      <a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cp_wstrb">Variable : cp_wstrb</a>    </li>
+    <li>
+      <a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_resp">Cross : cx_dir_resp</a>    </li>
+    <li>
+      <a href="#inst_tag_proc_pkg::proc_coverage::cg_data_bus.cx_dir_align">Cross : cx_dir_align</a>    </li>
+  </ul>
+  <ul name="tb_top.me.obj.cg_data_bus">
+    <li>
+      <a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_dir">Variable : cp_dir</a>    </li>
+    <li>
+      <a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_resp">Variable : cp_resp</a>    </li>
+    <li>
+      <a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_align">Variable : cp_align</a>    </li>
+    <li>
+      <a href="#inst_tag_tb_top.me.obj.cg_data_bus.cp_wstrb">Variable : cp_wstrb</a>    </li>
+    <li>
+      <a href="#inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_resp">Cross : cx_dir_resp</a>    </li>
+    <li>
+      <a href="#inst_tag_tb_top.me.obj.cg_data_bus.cx_dir_align">Cross : cx_dir_align</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

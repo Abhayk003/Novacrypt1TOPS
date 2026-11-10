@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: top_module</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts
+<div style="float:right; display:inline; cursor:pointer; width: 90px;">
+<a title="Hide Ratios" onClick="showHideRatios(this);">Hide Ratios</a>
+</div>
+</div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_top_module'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_top_module')">top_module</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td colspan=2 nowrap width=130 class="ratioshead">LINE</td><td colspan=2 nowrap width=130 class="ratioshead">COND</td><td colspan=2 nowrap width=130 class="ratioshead">TOGGLE</td><td colspan=2 nowrap width=130 class="ratioshead">FSM</td><td colspan=2 nowrap width=130 class="ratioshead">BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 95.69</td>
+<td class="s10 cl rt"><a href="mod19.html#Line" >100.00</a></td>
+<td class="s10 cl rt ratios">92/92</td>
+<td class="s9 cl rt"><a href="mod19.html#Cond" > 90.14</a></td>
+<td class="s9 cl rt ratios">64/71</td>
+<td class="s9 cl rt"><a href="mod19.html#Toggle" > 95.12</a></td>
+<td class="s9 cl rt ratios">2418/2542</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt ratios"></td>
+<td class="s9 cl rt"><a href="mod19.html#Branch" > 97.50</a></td>
+<td class="s9 cl rt ratios">39/40</td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/synp11/test_ssn/uvm_tb/../rtl/cpu/top_module.sv')">/home/synp11/test_ssn/uvm_tb/../rtl/cpu/top_module.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td colspan=2 nowrap width=130 class="ratioshead">LINE</td><td colspan=2 nowrap width=130 class="ratioshead">COND</td><td colspan=2 nowrap width=130 class="ratioshead">TOGGLE</td><td colspan=2 nowrap width=130 class="ratioshead">FSM</td><td colspan=2 nowrap width=130 class="ratioshead">BRANCH</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod19.html#inst_tag_19"  onclick="showContent('inst_tag_19')">tb_top.dut</a></td>
+<td class="s9 cl rt"> 95.69</td>
+<td class="s10 cl rt"><a href="mod19.html#Line" >100.00</a></td>
+<td class="s10 cl rt ratios">92/92</td>
+<td class="s9 cl rt"><a href="mod19.html#Cond" > 90.14</a></td>
+<td class="s9 cl rt ratios">64/71</td>
+<td class="s9 cl rt"><a href="mod19.html#Toggle" > 95.12</a></td>
+<td class="s9 cl rt ratios">2418/2542</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt ratios"></td>
+<td class="s9 cl rt"><a href="mod19.html#Branch" > 97.50</a></td>
+<td class="s9 cl rt ratios">39/40</td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_top_module'>
+<hr>
+<a name="inst_tag_19"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_19" >tb_top.dut</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td colspan=2 nowrap width=130 class="ratioshead">LINE</td><td colspan=2 nowrap width=130 class="ratioshead">COND</td><td colspan=2 nowrap width=130 class="ratioshead">TOGGLE</td><td colspan=2 nowrap width=130 class="ratioshead">FSM</td><td colspan=2 nowrap width=130 class="ratioshead">BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 95.69</td>
+<td class="s10 cl rt"><a href="mod19.html#Line" >100.00</a></td>
+<td class="s10 cl rt ratios">92/92</td>
+<td class="s9 cl rt"><a href="mod19.html#Cond" > 90.14</a></td>
+<td class="s9 cl rt ratios">64/71</td>
+<td class="s9 cl rt"><a href="mod19.html#Toggle" > 95.12</a></td>
+<td class="s9 cl rt ratios">2418/2542</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt ratios"></td>
+<td class="s9 cl rt"><a href="mod19.html#Branch" > 97.50</a></td>
+<td class="s9 cl rt ratios">39/40</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td colspan=2 nowrap width=130 class="ratioshead">LINE</td><td colspan=2 nowrap width=130 class="ratioshead">COND</td><td colspan=2 nowrap width=130 class="ratioshead">TOGGLE</td><td colspan=2 nowrap width=130 class="ratioshead">FSM</td><td colspan=2 nowrap width=130 class="ratioshead">BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 95.69</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt ratios">92/92</td>
+<td class="s9 cl rt"> 90.14</td>
+<td class="s9 cl rt ratios">64/71</td>
+<td class="s9 cl rt"> 95.12</td>
+<td class="s9 cl rt ratios">2418/2542</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt ratios"></td>
+<td class="s9 cl rt"> 97.50</td>
+<td class="s9 cl rt ratios">39/40</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td colspan=2 nowrap width=130 class="ratioshead">LINE</td><td colspan=2 nowrap width=130 class="ratioshead">COND</td><td colspan=2 nowrap width=130 class="ratioshead">TOGGLE</td><td colspan=2 nowrap width=130 class="ratioshead">FSM</td><td colspan=2 nowrap width=130 class="ratioshead">BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s5 cl rt"> 53.18</td>
+<td class="s5 cl rt"> 54.55</td>
+<td class="s5 cl rt ratios">24/44</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt ratios"></td>
+<td class="s7 cl rt"> 75.00</td>
+<td class="s7 cl rt ratios">3/4</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt ratios"></td>
+<td class="s3 cl rt"> 30.00</td>
+<td class="s3 cl rt ratios">3/10</td>
+<td><a href="mod10.html#inst_tag_10" >tb_top</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td colspan=2 nowrap width=130 class="ratioshead">LINE</td><td colspan=2 nowrap width=130 class="ratioshead">COND</td><td colspan=2 nowrap width=130 class="ratioshead">TOGGLE</td><td colspan=2 nowrap width=130 class="ratioshead">FSM</td><td colspan=2 nowrap width=130 class="ratioshead">BRANCH</td></tr><tr>
+<td colspan=12>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_top_module'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod19.html" >top_module</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>92</td><td>92</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>348</td><td>6</td><td>6</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>357</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>380</td><td>8</td><td>8</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>396</td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>465</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>498</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>510</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>523</td><td>10</td><td>10</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+347                     always_ff @(posedge clk) begin
+348        1/1              if (reset)
+349        1/1                  dbus_read_issued &lt;= 0;
+350        1/1              else if (dmem_rvalid)
+351        1/1                  dbus_read_issued &lt;= 0;
+352        1/1              else if (ARVALID_D &amp;&amp; ARREADY_D)
+353        1/1                  dbus_read_issued &lt;= 1;
+                        MISSING_ELSE
+354                     end
+355                     // AXI4 Data Bus - Read channel
+356                     always_ff @(posedge clk) begin
+357        1/1              if (reset) begin
+358        1/1                  ARVALID_D &lt;= 1'b0;
+359        1/1                  ARADDR_D  &lt;= 32'd0;
+360        1/1                  RREADY_D  &lt;= 1'b1;
+361                         end
+362                         else begin
+363        1/1                  RREADY_D &lt;= 1'b1;
+364        1/1                  if (dmem_re &amp;&amp; !ARVALID_D &amp;&amp; !dbus_read_issued ) begin
+365        1/1                      ARADDR_D  &lt;= dmem_addr;
+366        1/1                      ARVALID_D &lt;= 1'b1;
+367                             end
+368        1/1                  else if (ARREADY_D) begin
+369        1/1                      ARVALID_D &lt;= 1'b0;
+370                             end
+                        MISSING_ELSE
+371                         end
+372                     end
+373                     
+374                     assign dmem_rdata  = RDATA_D;
+375                     assign dmem_rvalid = RVALID_D;
+376                     
+377                     //// AXI4 Data Bus - Write channel
+378                     
+379                     always_comb begin
+380        1/1              case (ex_memwb_r.funct3)
+381                             3'b000: // SB - one byte lane
+382        1/1                      case (ex_memwb_r.mem_address[1:0])
+383        1/1                          2'b00: store_wstrb = 4'b0001;
+384        1/1                          2'b01: store_wstrb = 4'b0010;
+385        1/1                          2'b10: store_wstrb = 4'b0100;
+386        1/1                          2'b11: store_wstrb = 4'b1000;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+387                                 endcase
+388                             3'b001: // SH - two byte lanes
+389        1/1                      store_wstrb = ex_memwb_r.mem_address[1] ? 4'b1100 : 4'b0011;
+390                             default: // SW
+391        1/1                      store_wstrb = 4'b1111;
+392                         endcase
+393                     end
+394                     
+395                     always_ff @(posedge clk) begin
+396        1/1              if (reset) begin
+397        1/1                  AWVALID_D      &lt;= 1'b0;
+398        1/1                  WVALID_D       &lt;= 1'b0;
+399        1/1                  AWADDR_D       &lt;= 32'd0;
+400        1/1                  WDATA_D        &lt;= 32'd0;
+401        1/1                  WSTRB_D        &lt;= 4'b1111;
+402        1/1                  BREADY_D       &lt;= 1'b1;
+403        1/1                  store_inflight &lt;= 1'b0;
+404        1/1                  store_completed &lt;= 1'b0;
+405                         end
+406                         else begin
+407        1/1                  BREADY_D &lt;= 1'b1;
+408                             // Clear the completed-latch once the store instruction has actually left
+409                             // the MEM stage (dmem_we deasserts). Until then, keep it set so the same
+410                             // store cannot be issued again until it retires. store_completed is
+411                             // held only while THIS store is still the one in MEM; it clears as soon
+412                             // as the pipeline is no longer frozen on it (store_stall deasserted) so
+413                             // the next back-to-back store starts fresh. Concretely: clear when the
+414                             // store leaves MEM (dmem_we low) OR one cycle after completion once the
+415                             // stall has been released (advance_after_store), so each of several
+416                             // consecutive stores (e.g. the four SW in muldiv_corner) issues exactly
+417                             // once instead of the first store's completed-flag suppressing the rest.
+418                             // Clear store_completed when the store leaves MEM (!dmem_we) OR when a
+419                             // DIFFERENT store is now presented in MEM (dmem_addr no longer matches the
+420                             // address we just completed). The address check distinguishes the two
+421                             // cases that share dmem_we=1:
+422                             //   (a) back-to-back stores (muldiv: SW 0x20000,4,8,c) -- dmem_addr CHANGES
+423                             //       each store, so store_completed clears and the next store issues.
+424                             //   (b) one store frozen in MEM behind a following multiply -- dmem_addr
+425                             //       stays the SAME, so store_completed stays set and the store is not
+426                             //       re-issued on the bus while it waits to retire.
+427                             // if (!dmem_we || (store_completed &amp;&amp; dmem_addr != AWADDR_D))
+428                             //     store_completed &lt;= 1'b0;
+429                             // if (!dmem_we || advance_after_store || (store_completed &amp;&amp; dmem_addr != AWADDR_D))
+430                             //     store_completed &lt;= 1'b0;
+431        1/1                  if (!dmem_we || (store_completed &amp;&amp; !this_store_done))
+432        1/1                         store_completed &lt;= 1'b0;
+                        MISSING_ELSE
+433                     
+434                             // FIX: added &quot;&amp;&amp; !store_completed&quot;. Previously a store re-issued whenever
+435                             // (dmem_we &amp;&amp; !store_inflight) held, which recurs every time store_inflight
+436                             // clears while dmem_we is still asserted -- exactly what happens when the
+437                             // pipeline is stalled behind a following multi-cycle op (mul/div). That
+438                             // drove the SAME AXI write 2-4 times (observed as duplicate bus events /
+439                             // &quot;extra DUT memory op&quot; in random_regression). store_completed makes each
+440                             // store fire exactly once until it retires from MEM.
+441        1/1                  if (dmem_we &amp;&amp; !store_inflight &amp;&amp; !store_completed
+442                                 &amp;&amp; !AWVALID_D &amp;&amp; !WVALID_D) begin
+443        1/1                      AWADDR_D       &lt;= dmem_addr;
+444        1/1                      WDATA_D        &lt;= dmem_wdata;
+445        1/1                      WSTRB_D        &lt;= store_wstrb;
+446        1/1                      AWVALID_D      &lt;= 1'b1;
+447        1/1                      WVALID_D       &lt;= 1'b1;
+448        1/1                      store_inflight &lt;= 1'b1;
+449                             end
+450                             else begin
+451        2/2                      if (AWREADY_D) AWVALID_D &lt;= 1'b0;
+                        MISSING_ELSE
+452        2/2                      if (WREADY_D)  WVALID_D  &lt;= 1'b0;
+                        MISSING_ELSE
+453        1/1                      if (store_inflight &amp;&amp; BVALID_D &amp;&amp; BREADY_D
+454                                     &amp;&amp; !AWVALID_D &amp;&amp; !WVALID_D) begin
+455        1/1                          store_inflight  &lt;= 1'b0;
+456        1/1                          store_completed &lt;= 1'b1;   // mark this store done; block re-issue
+457                                 end
+                        MISSING_ELSE
+458                             end
+459                         end
+460                     end
+461                     
+462                     // Pipeline registers
+463                     always_comb begin
+464                         // defaults
+465        1/1              ifid_ex_next  = ifid_ex_n;
+466        1/1              ex_memwb_next = ex_memwb_n;
+467                     
+468        1/1              if (dmem_stall || store_stall) begin
+469        1/1                  ifid_ex_next  = ifid_ex_r;   // freeze
+470        1/1                  ex_memwb_next = ex_memwb_r;  // freeze
+471                         end
+472        1/1              else if (jalr_taken || trap_taken || mret_taken) begin
+473        1/1                  ifid_ex_next  = '0;
+474                             // On a synchronous exception (illegal/misalign/ecall/ebreak), the faulting
+475                             // instruction must NOT commit: squash the EX/MEM stage so a misaligned
+476                             // load/store never reaches the bus. (Interrupts are taken between
+477                             // instructions, so the interrupted instruction still completes.)
+478        1/1                  if (exc_taken)
+479        1/1                      ex_memwb_next = '0;
+                        MISSING_ELSE
+480                         end
+481        1/1              else if (branch_taken) begin
+482        1/1                  ifid_ex_next = '0;
+483                             //ex_memwb_next = ex_memwb_r;
+484                             end
+485        1/1              else if (mul_stall || div_stall) begin
+486        1/1                  ifid_ex_next  = ifid_ex_r;          // bubble upstream
+487        1/1                  ex_memwb_next = ex_memwb_r;  // freeze EX/WB
+488                         end
+489        1/1              else if (stall) begin
+490        1/1                  ifid_ex_next  = '0;
+491        1/1                  ex_memwb_next = ex_memwb_n;
+492                         end
+                        MISSING_ELSE
+493                         // else: defaults already set above (normal advance)
+494                     end
+495                     
+496                     // Single clean register - just flops whatever the comb logic decided
+497                     always_ff @(posedge clk) begin
+498        1/1              if (reset) begin
+499        1/1                  ifid_ex_r  &lt;= '0;
+500        1/1                  ex_memwb_r &lt;= '0;
+501                         end
+502                         else begin
+503        1/1                  ifid_ex_r  &lt;= ifid_ex_next;
+504        1/1                  ex_memwb_r &lt;= ex_memwb_next;
+505                         end
+506                     end
+507                     
+508                     
+509                     always_comb begin
+510        1/1              ifid_ex_n = '0;
+511        1/1              ifid_ex_n.pc        = pc;
+512        1/1              ifid_ex_n.immediate = immediate;
+513        1/1              ifid_ex_n.rs1       = rs1;
+514        1/1              ifid_ex_n.rs2       = rs2;
+515        1/1              ifid_ex_n.rd        = rd;
+516        1/1              ifid_ex_n.opcode    = opcode;
+517        1/1              ifid_ex_n.funct3    = funct3;
+518        1/1              ifid_ex_n.funct7    = funct7;
+519        1/1              ifid_ex_n.csr_addr  = csr_addr;
+520                     end
+521                     
+522                     always_comb begin
+523        1/1              ex_memwb_n = '0;
+524        1/1              ex_memwb_n.ex_result      = ex_result;
+525        1/1              ex_memwb_n.rd_ex          = ifid_ex_r.rd;
+526        1/1              ex_memwb_n.mem_address    = mem_address;
+527        1/1              ex_memwb_n.mem_write_data = mem_write_data;
+528        1/1              ex_memwb_n.mem_read       = mem_read;
+529        1/1              ex_memwb_n.mem_write      = mem_write;
+530        1/1              ex_memwb_n.ex_memread     = ex_memread;
+531        1/1              ex_memwb_n.funct3         = ifid_ex_r.funct3; //added for lw variants
+532        1/1              ex_memwb_n.reg_write      = ex_regwrite;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod19.html" >top_module</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>71</td><td>64</td><td>90.14</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>71</td><td>64</td><td>90.14</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       75
+ EXPRESSION (ex_memwb_r.mem_read &amp;&amp; ((!dmem_rvalid)))
+             ---------1---------    --------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       94
+ EXPRESSION (store_completed &amp;&amp; (dmem_addr == AWADDR_D) &amp;&amp; (dmem_wdata == WDATA_D) &amp;&amp; (store_wstrb == WSTRB_D))
+             -------1-------    -----------2-----------    -----------3-----------    ------------4-----------
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       97
+ EXPRESSION (dmem_we &amp;&amp; ((!this_store_done)))
+             ---1---    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ EXPRESSION (store_completed &amp;&amp; ((!dmem_stall)) &amp;&amp; ((!mul_stall)) &amp;&amp; ((!div_stall)))
+             -------1-------    -------2-------    -------3------    -------4------
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       169
+ EXPRESSION (((branch_taken || jalr_taken) &amp;&amp; ((!stall))) || trap_taken || mret_taken)
+             ----------------------1---------------------    -----2----    -----3----
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       169
+ SUB-EXPRESSION ((branch_taken || jalr_taken) &amp;&amp; ((!stall)))
+                 --------------1-------------    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       169
+ SUB-EXPRESSION (branch_taken || jalr_taken)
+                 ------1-----    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       170
+ EXPRESSION (trap_taken ? trap_target : (mret_taken ? mret_target : (branch_taken ? branch_immediate : (jalr_taken ? jalr_target : pc))))
+             -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       170
+ SUB-EXPRESSION (mret_taken ? mret_target : (branch_taken ? branch_immediate : (jalr_taken ? jalr_target : pc)))
+                 -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       170
+ SUB-EXPRESSION (branch_taken ? branch_immediate : (jalr_taken ? jalr_target : pc))
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       170
+ SUB-EXPRESSION (jalr_taken ? jalr_target : pc)
+                 -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       352
+ EXPRESSION (ARVALID_D &amp;&amp; ARREADY_D)
+             ----1----    ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       364
+ EXPRESSION (dmem_re &amp;&amp; ((!ARVALID_D)) &amp;&amp; ((!dbus_read_issued)))
+             ---1---    -------2------    ----------3----------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       389
+ EXPRESSION (ex_memwb_r.mem_address[1] ? 4'b1100 : 4'b0011)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       431
+ EXPRESSION (((!dmem_we)) || (store_completed &amp;&amp; ((!this_store_done))))
+             ------1-----    --------------------2--------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       431
+ SUB-EXPRESSION (store_completed &amp;&amp; ((!this_store_done)))
+                 -------1-------    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       441
+ EXPRESSION (dmem_we &amp;&amp; ((!store_inflight)) &amp;&amp; ((!store_completed)) &amp;&amp; ((!AWVALID_D)) &amp;&amp; ((!WVALID_D)))
+             ---1---    ---------2---------    ----------3---------    -------4------    ------5------
+</pre>
+<table class="noborder">
+<col span="5" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>-5-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       453
+ EXPRESSION (store_inflight &amp;&amp; BVALID_D &amp;&amp; BREADY_D &amp;&amp; ((!AWVALID_D)) &amp;&amp; ((!WVALID_D)))
+             -------1------    ----2---    ----3---    -------4------    ------5------
+</pre>
+<table class="noborder">
+<col span="5" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>-5-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       468
+ EXPRESSION (dmem_stall || store_stall)
+             -----1----    -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       472
+ EXPRESSION (jalr_taken || trap_taken || mret_taken)
+             -----1----    -----2----    -----3----
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       485
+ EXPRESSION (mul_stall || div_stall)
+             ----1----    ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod19.html" >top_module</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Totals</td>
+<td class="rt">145</td>
+<td class="rt">137</td>
+<td class="rt">94.48 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">2542</td>
+<td class="rt">2418</td>
+<td class="rt">95.12 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">1271</td>
+<td class="rt">1210</td>
+<td class="rt">95.20 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">1271</td>
+<td class="rt">1208</td>
+<td class="rt">95.04 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">27</td>
+<td class="rt">23</td>
+<td class="rt">85.19 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">344</td>
+<td class="rt">331</td>
+<td class="rt">96.22 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">172</td>
+<td class="rt">165</td>
+<td class="rt">95.93 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">172</td>
+<td class="rt">166</td>
+<td class="rt">96.51 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Signals</td>
+<td class="rt">118</td>
+<td class="rt">114</td>
+<td class="rt">96.61 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">2198</td>
+<td class="rt">2087</td>
+<td class="rt">94.95 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1099</td>
+<td class="rt">1045</td>
+<td class="rt">95.09 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1099</td>
+<td class="rt">1042</td>
+<td class="rt">94.81 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARADDR_I[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARADDR_I[12:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARADDR_I[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARLEN_I[7:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARSIZE_I[2:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARBURST_I[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARVALID_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARREADY_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RDATA_I[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RVALID_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RLAST_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RRESP_I[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RREADY_I</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARADDR_D[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARADDR_D[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARADDR_D[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARADDR_D[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARVALID_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ARREADY_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RDATA_D[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RVALID_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RRESP_D[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RREADY_D</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>AWADDR_D[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>AWADDR_D[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>AWADDR_D[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>AWADDR_D[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>AWVALID_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>AWREADY_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDATA_D[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WSTRB_D[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WVALID_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WREADY_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>BRESP_D[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>BVALID_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>BREADY_D</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>irq_timer_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>irq_software_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>irq_external_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>fetch_instr[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>fetch_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>fifo_instr[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>fifo_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>consume</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>fifo_count[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_addr[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_addr[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>dmem_addr[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_addr[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>dmem_wdata[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_we</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_re</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_rdata[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_rvalid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dmem_stall</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mul_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mul_busy</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mul_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mul_stall</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>div_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>div_busy</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>div_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>div_stall</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>store_wstrb[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>store_inflight</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>advance_after_store</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>store_completed</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>store_stall</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>this_store_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.csr_addr[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.funct7[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.opcode[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.rd[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.rs2[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.rs1[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.immediate[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.pc[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ifid_ex_r.pc[12:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_r.pc[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ifid_ex_n.csr_addr[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.funct7[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.opcode[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.rd[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.rs2[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.rs1[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.immediate[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.pc[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ifid_ex_n.pc[12:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_n.pc[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ifid_ex_next.csr_addr[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.funct7[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.opcode[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.rd[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.rs2[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.rs1[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.immediate[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.pc[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ifid_ex_next.pc[12:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ifid_ex_next.pc[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_r.reg_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.ex_memread</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.mem_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.mem_read</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.mem_write_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.mem_address[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.mem_address[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_r.mem_address[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.mem_address[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_r.rd_ex[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_r.ex_result[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.reg_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.ex_memread</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.mem_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.mem_read</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.mem_write_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.mem_address[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.mem_address[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_n.mem_address[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.mem_address[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_n.rd_ex[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_n.ex_result[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.reg_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.ex_memread</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.mem_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.mem_read</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.mem_write_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.mem_address[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.mem_address[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_next.mem_address[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.mem_address[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memwb_next.rd_ex[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_memwb_next.ex_result[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>pc[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>pc[12:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>pc[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>rs1[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rs2[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>immediate[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>opcode[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>funct3[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>funct7[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>csr_addr[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>branch_immediate[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>branch_immediate[10:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>branch_immediate[11]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>branch_immediate[12]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>branch_immediate[31:13]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>jalr_target[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>jalr_target[5:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>jalr_target[6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>jalr_target[9:7]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>jalr_target[31:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>jalr_taken</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>stall</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mem_address[17:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mem_address[27:18]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>mem_address[28]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mem_address[31:29]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>mem_write_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mem_read</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mem_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_result[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ex[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ex_regwrite</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>forwardA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>forwardB</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>branch_taken</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>trap_taken</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>exc_taken</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>trap_target[3:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>trap_target[5:4]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>trap_target[6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>trap_target[31:7]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>mret_taken</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mret_target[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>mret_target[4:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mret_target[5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mret_target[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>mret_target[8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mret_target[12:9]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>mret_target[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>redirect</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>redirect_target[1:0]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>redirect_target[12:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>redirect_target[31:13]</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+<td class="wht cl">Unreachable</td>
+</tr><tr>
+<td>ex_memread</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rs1_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rs2_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>reg_wdata[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>reg_waddr[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>reg_we</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dbus_read_issued</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod19.html" >top_module</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Branches</td>
+<td></td>
+<td class="rt">40</td>
+<td class="rt">39</td>
+<td class="rt">97.50 </td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">170</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">348</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">357</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s8">
+<td>CASE</td>
+<td class="rt">380</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">396</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">468</td>
+<td class="rt">7</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">498</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+170        assign redirect_target = trap_taken   ? trap_target :
+                                                 <font color = "green">-1-</font>  
+                                                 <font color = "green">==></font>  
+171                                 mret_taken    ? mret_target :
+                                                  <font color = "green">-2-</font>  
+                                                  <font color = "green">==></font>  
+172                                 branch_taken  ? branch_immediate :
+                                                  <font color = "green">-3-</font>  
+                                                  <font color = "green">==></font>  
+173                                 jalr_taken    ? jalr_target : pc;
+                                                  <font color = "green">-4-</font>  
+                                                  <font color = "green">==></font>  
+                                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+348            if (reset)
+               <font color = "green">-1-</font>  
+349                dbus_read_issued <= 0;
+           <font color = "green">        ==></font>
+350            else if (dmem_rvalid)
+                    <font color = "green">-2-</font>  
+351                dbus_read_issued <= 0;
+           <font color = "green">        ==></font>
+352            else if (ARVALID_D && ARREADY_D)
+                    <font color = "green">-3-</font>  
+353                dbus_read_issued <= 1;
+           <font color = "green">        ==></font>
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+357            if (reset) begin
+               <font color = "green">-1-</font>  
+358                ARVALID_D <= 1'b0;
+           <font color = "green">        ==></font>
+359                ARADDR_D  <= 32'd0;
+360                RREADY_D  <= 1'b1;
+361            end
+362            else begin
+363                RREADY_D <= 1'b1;
+364                if (dmem_re && !ARVALID_D && !dbus_read_issued ) begin
+                   <font color = "green">-2-</font>  
+365                    ARADDR_D  <= dmem_addr;
+           <font color = "green">            ==></font>
+366                    ARVALID_D <= 1'b1;
+367                end
+368                else if (ARREADY_D) begin
+                        <font color = "green">-3-</font>  
+369                    ARVALID_D <= 1'b0;
+           <font color = "green">            ==></font>
+370                end
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+380            case (ex_memwb_r.funct3)
+               <font color = "green">-1-</font>  
+381                3'b000: // SB - one byte lane
+382                    case (ex_memwb_r.mem_address[1:0])
+                       <font color = "red">-2-</font>  
+383                        2'b00: store_wstrb = 4'b0001;
+           <font color = "green">                ==></font>
+384                        2'b01: store_wstrb = 4'b0010;
+           <font color = "green">                ==></font>
+385                        2'b10: store_wstrb = 4'b0100;
+           <font color = "green">                ==></font>
+386                        2'b11: store_wstrb = 4'b1000;
+           <font color = "green">                ==></font>
+                           MISSING_DEFAULT
+           <font color = "red">                ==></font>
+387                    endcase
+388                3'b001: // SH - two byte lanes
+389                    store_wstrb = ex_memwb_r.mem_address[1] ? 4'b1100 : 4'b0011;
+                                                               <font color = "green">-3-</font>  
+                                                               <font color = "green">==></font>  
+                                                               <font color = "green">==></font>  
+390                default: // SW
+391                    store_wstrb = 4'b1111;
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>3'b000 </td>
+<td align=center>2'b00 </td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>3'b000 </td>
+<td align=center>2'b01 </td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>3'b000 </td>
+<td align=center>2'b10 </td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>3'b000 </td>
+<td align=center>2'b11 </td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>3'b000 </td>
+<td align=center>MISSING_DEFAULT</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>3'b001 </td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>3'b001 </td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>default</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+396            if (reset) begin
+               <font color = "green">-1-</font>  
+397                AWVALID_D      <= 1'b0;
+           <font color = "green">        ==></font>
+398                WVALID_D       <= 1'b0;
+399                AWADDR_D       <= 32'd0;
+400                WDATA_D        <= 32'd0;
+401                WSTRB_D        <= 4'b1111;
+402                BREADY_D       <= 1'b1;
+403                store_inflight <= 1'b0;
+404                store_completed <= 1'b0;
+405            end
+406            else begin
+407                BREADY_D <= 1'b1;
+408                // Clear the completed-latch once the store instruction has actually left
+409                // the MEM stage (dmem_we deasserts). Until then, keep it set so the same
+410                // store cannot be issued again until it retires. store_completed is
+411                // held only while THIS store is still the one in MEM; it clears as soon
+412                // as the pipeline is no longer frozen on it (store_stall deasserted) so
+413                // the next back-to-back store starts fresh. Concretely: clear when the
+414                // store leaves MEM (dmem_we low) OR one cycle after completion once the
+415                // stall has been released (advance_after_store), so each of several
+416                // consecutive stores (e.g. the four SW in muldiv_corner) issues exactly
+417                // once instead of the first store's completed-flag suppressing the rest.
+418                // Clear store_completed when the store leaves MEM (!dmem_we) OR when a
+419                // DIFFERENT store is now presented in MEM (dmem_addr no longer matches the
+420                // address we just completed). The address check distinguishes the two
+421                // cases that share dmem_we=1:
+422                //   (a) back-to-back stores (muldiv: SW 0x20000,4,8,c) -- dmem_addr CHANGES
+423                //       each store, so store_completed clears and the next store issues.
+424                //   (b) one store frozen in MEM behind a following multiply -- dmem_addr
+425                //       stays the SAME, so store_completed stays set and the store is not
+426                //       re-issued on the bus while it waits to retire.
+427                // if (!dmem_we || (store_completed && dmem_addr != AWADDR_D))
+428                //     store_completed <= 1'b0;
+429                // if (!dmem_we || advance_after_store || (store_completed && dmem_addr != AWADDR_D))
+430                //     store_completed <= 1'b0;
+431                if (!dmem_we || (store_completed && !this_store_done))
+                   <font color = "green">-2-</font>  
+432                       store_completed <= 1'b0;
+           <font color = "green">               ==></font>
+                          MISSING_ELSE
+           <font color = "green">               ==></font>
+433        
+434                // FIX: added "&& !store_completed". Previously a store re-issued whenever
+435                // (dmem_we && !store_inflight) held, which recurs every time store_inflight
+436                // clears while dmem_we is still asserted -- exactly what happens when the
+437                // pipeline is stalled behind a following multi-cycle op (mul/div). That
+438                // drove the SAME AXI write 2-4 times (observed as duplicate bus events /
+439                // "extra DUT memory op" in random_regression). store_completed makes each
+440                // store fire exactly once until it retires from MEM.
+441                if (dmem_we && !store_inflight && !store_completed
+                   <font color = "green">-3-</font>  
+442                    && !AWVALID_D && !WVALID_D) begin
+443                    AWADDR_D       <= dmem_addr;
+           <font color = "green">            ==></font>
+444                    WDATA_D        <= dmem_wdata;
+445                    WSTRB_D        <= store_wstrb;
+446                    AWVALID_D      <= 1'b1;
+447                    WVALID_D       <= 1'b1;
+448                    store_inflight <= 1'b1;
+449                end
+450                else begin
+451                    if (AWREADY_D) AWVALID_D <= 1'b0;
+                       <font color = "green">-4-</font>  
+           <font color = "green">            ==></font>
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+452                    if (WREADY_D)  WVALID_D  <= 1'b0;
+                       <font color = "green">-5-</font>  
+           <font color = "green">            ==></font>
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+453                    if (store_inflight && BVALID_D && BREADY_D
+                       <font color = "green">-6-</font>  
+454                        && !AWVALID_D && !WVALID_D) begin
+455                        store_inflight  <= 1'b0;
+           <font color = "green">                ==></font>
+456                        store_completed <= 1'b1;   // mark this store done; block re-issue
+457                    end
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+468            if (dmem_stall || store_stall) begin
+               <font color = "green">-1-</font>  
+469                ifid_ex_next  = ifid_ex_r;   // freeze
+           <font color = "green">        ==></font>
+470                ex_memwb_next = ex_memwb_r;  // freeze
+471            end
+472            else if (jalr_taken || trap_taken || mret_taken) begin
+                    <font color = "green">-2-</font>  
+473                ifid_ex_next  = '0;
+474                // On a synchronous exception (illegal/misalign/ecall/ebreak), the faulting
+475                // instruction must NOT commit: squash the EX/MEM stage so a misaligned
+476                // load/store never reaches the bus. (Interrupts are taken between
+477                // instructions, so the interrupted instruction still completes.)
+478                if (exc_taken)
+                   <font color = "green">-3-</font>  
+479                    ex_memwb_next = '0;
+           <font color = "green">            ==></font>
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+480            end
+481            else if (branch_taken) begin
+                    <font color = "green">-4-</font>  
+482                ifid_ex_next = '0;
+           <font color = "green">        ==></font>
+483                //ex_memwb_next = ex_memwb_r;
+484                end
+485            else if (mul_stall || div_stall) begin
+                    <font color = "green">-5-</font>  
+486                ifid_ex_next  = ifid_ex_r;          // bubble upstream
+           <font color = "green">        ==></font>
+487                ex_memwb_next = ex_memwb_r;  // freeze EX/WB
+488            end
+489            else if (stall) begin
+                    <font color = "green">-6-</font>  
+490                ifid_ex_next  = '0;
+           <font color = "green">        ==></font>
+491                ex_memwb_next = ex_memwb_n;
+492            end
+               MISSING_ELSE
+           <font color = "green">    ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+498            if (reset) begin
+               <font color = "green">-1-</font>  
+499                ifid_ex_r  <= '0;
+           <font color = "green">        ==></font>
+500                ex_memwb_r <= '0;
+501            end
+502            else begin
+503                ifid_ex_r  <= ifid_ex_next;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_19">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_top_module">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

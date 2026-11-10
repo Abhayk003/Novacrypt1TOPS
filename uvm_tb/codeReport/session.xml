@@ -1,0 +1,31 @@
+<session version="1.1" release="R-2020.12-SP2-1" timestp="2026-11-10 12:29:48 GMT">
+  <info>
+    <attr name="datetime" value="Tue Nov 10 07:29:54 2026
+"/>
+    <attr name="command" value="urg -dir ./cm.vdb -metric line+cond+fsm+tgl+branch -show ratios -report codeReport"/>
+    <attr name="top_instance" value="tb_top"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="116/136" />
+    <metric name="Cond" value="64/71" />
+    <metric name="Toggle" value="2760/2900" />
+    <metric name="Branch" value="42/50" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+  </scope>
+  <scope type="assert" name="Statistics">
+  </scope>
+  </old_coverage>
+</session>
