@@ -1,0 +1,17 @@
+Checkout succeeded: VCSRuntime_Net/AF3AD4D7787CF4828637
+	License file: 27020@14.139.1.126
+	License Server: 27020@14.139.1.126
+[SCL] Checking status for feature VCSRuntime_Net - 11/11/2026 02:30:57
+[SCL] 11/11/2026 02:30:57 PID:148637 Client:icdserver.rvce.edu.in Server:27020@14.139.1.126 Checkout succeeded VCSRuntime_Net 2020.12
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Nov 11 02:30 2026
+Novacrypt riscv-dv test started
+TEST PASSED: tohost = 1
+$finish called from file "tb/tb_riscv_dv.sv", line 67.
+$finish at simulation time            102185000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 102185000 ps
+CPU Time:      0.950 seconds;       Data structure size:   1.0Mb
+Wed Nov 11 02:30:57 2026
+[SCL] 11/11/2026 02:30:57 PID:148637 Client:icdserver.rvce.edu.in checkin (null) 
