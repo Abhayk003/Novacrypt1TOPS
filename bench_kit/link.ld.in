@@ -1,0 +1,48 @@
+#include "platform.h"
+OUTPUT_ARCH(riscv)
+ENTRY(_start)
+#if PLAT_UNIFIED
+MEMORY { MEM (rwx) : ORIGIN = PLAT_ROM_BASE, LENGTH = PLAT_ROM_SIZE }
+REGION_ALIAS("ROM", MEM)
+REGION_ALIAS("RAM", MEM)
+#else
+MEMORY
+{
+  ROM (rx)  : ORIGIN = PLAT_ROM_BASE, LENGTH = PLAT_ROM_SIZE
+  RAM (rwx) : ORIGIN = PLAT_RAM_BASE, LENGTH = PLAT_RAM_SIZE
+}
+#endif
+SECTIONS
+{
+  .text : { *(.init) *(.text .text.*) } > ROM
+#if PLAT_HARVARD
+  .rodata : { . = ALIGN(8); *(.rodata .rodata.* .srodata .srodata.*) . = ALIGN(8); } > RAM
+#else
+  .rodata : { . = ALIGN(8); *(.rodata .rodata.* .srodata .srodata.*) . = ALIGN(8); } > ROM
+#endif
+  _data_lma = LOADADDR(.data);
+  .data : ALIGN(8)
+  {
+    _data_start = .;
+    *(.data .data.*)
+    __global_pointer$ = . + 0x800;
+    *(.sdata .sdata.*)
+    . = ALIGN(8);
+    _data_end = .;
+#if PLAT_HARVARD
+  } > RAM
+#else
+  } > RAM AT> ROM
+#endif
+  .bss (NOLOAD) : ALIGN(8)
+  {
+    _bss_start = .;
+    *(.sbss .sbss.*) *(.bss .bss.*) *(COMMON)
+    . = ALIGN(8);
+    _bss_end = .;
+  } > RAM
+  . = ALIGN(16);
+  _heap_start = .;
+  _stack_top  = ORIGIN(RAM) + LENGTH(RAM);
+  _heap_end   = _stack_top - PLAT_STACK_SIZE;
+}
