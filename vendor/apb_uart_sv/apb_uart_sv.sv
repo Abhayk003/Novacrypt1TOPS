@@ -197,6 +197,7 @@ module apb_uart_sv
         regs_n          = regs_q;
         trigger_level_n = trigger_level_q;
 
+        fifo_tx_data    = '0;
         fifo_tx_valid   = 1'b0;
         tx_fifo_clr_n   = 1'b0; // self clearing
         rx_fifo_clr_n   = 1'b0; // self clearing
